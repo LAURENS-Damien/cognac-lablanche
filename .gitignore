@@ -20,3 +20,7 @@ debug.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Generates sources
+*.js
+*.js.map

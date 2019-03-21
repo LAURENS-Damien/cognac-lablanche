@@ -11,19 +11,19 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import axios from 'axios';
+import * as Constants from '@/ts/constants';
 
 @Component
 export default class About extends Vue {
   private message: string = 'Test';
-  private urlPages: string = 'http://localhost/wp-json/wp/v2/pages';
   private pages = [];
 
   public affiche() {
-    alert('TEST2');
+    alert(Constants.URL_PAGES);
   }
 
   public created() {
-    axios.get(this.urlPages)
+    axios.get(Constants.URL_PAGES)
       .then((response) => {
         this.pages = response.data;
       });
