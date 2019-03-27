@@ -19,13 +19,17 @@ export default class About extends Vue {
   private pages = [];
 
   public affiche() {
-    alert(Constants.URL_PAGES);
+    alert(process.env.VUE_APP_API_PATH);
   }
 
   public created() {
     axios.get(Constants.URL_PAGES)
       .then((response) => {
         this.pages = response.data;
+      })
+      .catch((error) => {
+        // handle error
+        window.location.href = '/error';
       });
   }
 

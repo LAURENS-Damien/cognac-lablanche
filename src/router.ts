@@ -2,7 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import HomeOrigin from './views/HomeOrigin.vue';
 import About from './views/About.vue';
-import Home from '@/views/Home.vue';
+import Home from './views/Home.vue';
+import Error from './views/Error.vue';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About,
+    },
+    {
+      path: '/error',
+      name: 'error',
+      component: Error,
     },
   ],
 });

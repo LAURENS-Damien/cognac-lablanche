@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serveMock": "vue-cli-service serve --mode mock",
+    "lauchMockServer": "mockserver -p 9001 -m test/mocks",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
