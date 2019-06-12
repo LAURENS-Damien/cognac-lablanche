@@ -8,6 +8,7 @@ import Error from './views/Error.vue';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -25,7 +26,7 @@ export default new Router({
       component: About,
     },
     {
-      path: '/error',
+      path: '*',
       name: 'error',
       component: Error,
     },
