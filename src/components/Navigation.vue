@@ -1,9 +1,41 @@
 <template>
-    <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/homeorigin">HomeOrigin</router-link> |
-        <router-link to="/about">About</router-link>
-    </div>
+    <b-navbar toggleable="sm" type="light" variant="light">
+        <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+
+        <b-navbar-brand><img alt="Vue logo" src="../assets/logo.png"></b-navbar-brand>
+
+        <b-collapse id="nav-text-collapse" is-nav>
+            <b-navbar-nav>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/">Accueil</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/error">Photos</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/error">Catalogue</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/error">Contact</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/error">Newsletter</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/error">Commander</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/home">Home</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/homeorigin">HomeOrigin</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/about">About</router-link>
+                </li>
+            </b-navbar-nav>
+        </b-collapse>
+    </b-navbar>
 </template>
 
 <script lang="ts">
@@ -15,14 +47,4 @@
 </script>
 
 <style lang="scss" scoped>
-#nav {
-    padding: 30px;
-    a {
-        font-weight: bold;
-        color: #2c3e50;
-        &.router-link-exact-active {
-             color: #42b983;
-        }
-    }
-}
 </style>
