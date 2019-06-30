@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import Accueil from './views/Accueil.vue';
 import HomeOrigin from './views/HomeOrigin.vue';
 import About from './views/About.vue';
 import Home from './views/Home.vue';
@@ -12,9 +13,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'accueil',
+      component: Accueil,
     },
+    // {
+    //   path: '/home',
+    //   name: 'home',
+    //   component: Home,
+    // },
     {
       path: '/homeorigin',
       name: 'homeorigin',
