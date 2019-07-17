@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable="sm" type="light" variant="light">
+    <b-navbar toggleable="lg" type="dark" variant="dark">
         <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
 
         <b-navbar-brand><img alt="Vue logo" src="../assets/logo.png"></b-navbar-brand>
