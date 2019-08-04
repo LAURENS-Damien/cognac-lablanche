@@ -12,6 +12,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import axios from 'axios';
 import * as Constants from '@/ts/constants';
+// import Services from '@/ts/Services';
 
 @Component
 export default class About extends Vue {
@@ -31,6 +32,9 @@ export default class About extends Vue {
         // handle error
         window.location.href = '/error';
       });
+    // const test = Services.getWPDData();
+    // alert(test);
+    // Services.getWPDData().then((value) => this.pages = value.data);
   }
 
 }
