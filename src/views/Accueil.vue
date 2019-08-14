@@ -2,13 +2,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                Page d'accueil
+                <div class="text-center" v-html="accueilPage.title.rendered"></div>
                 <Separator/>
-                Page d'accueil<br>
-                Page d'accueil<br>
-                <div v-for="page in accueilPage">
-                    {{page.content.rendered}}
-                </div>
+                <div class="text-center" v-html="accueilPage.content.rendered"></div>
             </div>
         </div>
     </div>
@@ -26,7 +22,7 @@
       },
     })
     export default class Accueil extends Vue {
-      private accueilPage = [];
+      private accueilPage = {};
 
       public created() {
         axios.get(Constants.URL_PAGE_ACCUEIL)

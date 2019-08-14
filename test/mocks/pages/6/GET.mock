@@ -2,12 +2,12 @@ HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Access-Control-Allow-Origin: *
 
-[
 {
 "id":6,
+"title":{
+  "rendered":"Bienvenue"
+},
 "content":{
-"rendered":"\n<p>Venez d\u00e9couvrir l&rsquo;univers, le travail et le savoir faire depuis plusieurs g\u00e9n\u00e9rations de la famille LABLANCHE, producteur de Cognac, Pineau des Charentes et vins de Pays Charentais, viticulteurs sur la commune de CHADENAC en Charente-Maritime.<\/p>\n",
-"protected":false
+  "rendered":"\n<p>Venez d\u00e9couvrir l&rsquo;univers, le travail et le savoir faire depuis plusieurs g\u00e9n\u00e9rations de la famille LABLANCHE, producteur de Cognac, Pineau des Charentes et vins de Pays Charentais, viticulteurs sur la commune de CHADENAC en Charente-Maritime.<\/p>\n"
 }
 }
-]
