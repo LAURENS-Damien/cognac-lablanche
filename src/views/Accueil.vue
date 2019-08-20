@@ -5,6 +5,7 @@
                 <div class="text-center" v-html="accueilPage.title.rendered"></div>
                 <Separator/>
                 <div class="text-center" v-html="accueilPage.content.rendered"></div>
+                <Contact class="pt-5"/>
             </div>
         </div>
     </div>
@@ -13,12 +14,14 @@
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
     import Separator from '@/components/Separator.vue';
+    import Contact from '@/components/Contact.vue';
     import axios from 'axios';
     import * as Constants from '@/ts/constants';
 
     @Component({
       components: {
         Separator,
+          Contact,
       },
     })
     export default class Accueil extends Vue {
