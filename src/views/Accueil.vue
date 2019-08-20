@@ -8,6 +8,11 @@
                 <Contact class="pt-5"/>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 px-0">
+                <Footer/>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -15,6 +20,7 @@
     import { Component, Vue } from 'vue-property-decorator';
     import Separator from '@/components/Separator.vue';
     import Contact from '@/components/Contact.vue';
+    import Footer from '@/components/Footer.vue';
     import axios from 'axios';
     import * as Constants from '@/ts/constants';
 
@@ -22,6 +28,7 @@
       components: {
         Separator,
           Contact,
+          Footer,
       },
     })
     export default class Accueil extends Vue {
