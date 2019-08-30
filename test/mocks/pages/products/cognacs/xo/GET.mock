@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+{
+"id":1,
+"title":{
+  "rendered":"Cognac XO"
+},
+"appellation":{
+  "rendered":"A.O.C Cognac"
+},
+"img":{
+  "rendered":"/img/cognac_xo.jpg"
+},
+"description":{
+    "rendered":"Ce Cognac est élaboré par distillation de vin issu de vignes en appellation Petite Champagne C'est un Cognac qui a vieillit pendant plus de 30années.Ilest l'âme et le cœur de notre famille."
+}
+}
