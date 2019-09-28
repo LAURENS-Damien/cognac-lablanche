@@ -25,7 +25,7 @@
     import { Component, Vue } from 'vue-property-decorator';
     import Separator from '@/components/Separator.vue';
     import Contact from '@/components/Contact.vue';
-    import Products from '@/components/Products.vue';
+    import Products from '@/components/Catalog.vue';
     import Footer from '@/components/Footer.vue';
     import axios from 'axios';
     import * as Constants from '@/ts/constants';

@@ -2,40 +2,85 @@
     <div>
         <div class="bottle">
             <!--        <img alt="" src="@/../test/mocks/pages/products/xo/cognac_xo.jpg">-->
-            <img alt="" v-bind:src="product.img.rendered">
+            <img alt="" v-bind:src="photo" class="product-size">
         </div>
-        <span v-html="product.title.rendered" class="font-weight-bold"></span>
+        <span v-html="productName" class="font-weight-bold"></span>
         <br>
-        <span v-html="product.appellation.rendered"></span>
-        <p v-if="fullDescription" v-html="product.description.rendered">Description</p>
+        <span v-html="appellation"></span>
+        <!--<p v-if="fullDescription" v-html="product.post_content">Description</p>-->
     </div>
 </template>
 
 <script lang="ts">
-    import { Component, Prop, Vue } from 'vue-property-decorator';
-    import * as Constants from '@/ts/constants';
-    import axios from 'axios';
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import * as Constants from '@/ts/constants';
+import axios from 'axios';
 
-    @Component
-    export default class Product extends Vue {
-        @Prop() private fullDescription!: boolean;
-        private product = {};
+@Component
+export default class Product extends Vue {
 
-        public created() {
-            axios.get(Constants.URL_COGNAC_XO)
-                .then((response) => {
-                    this.product = response.data;
-                })
-                .catch((error) => {
-                    window.location.href = '/error';
-                });
-        }
+    @Prop() private productPath!: string;
+    @Prop() private fullDescription!: boolean;
+    private productId: number = 0;
+    private productName: string = '';
+    private featuredMediaUrl: string = '';
+    private photo: string = '';
+    private appellation: string = '';
+
+    public created() {
+      this.getPhoto();
     }
+
+    public getPhoto() {
+        axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
+          .then((response) => {
+            this.productId = response.data.ID;
+            this.productName = response.data.post_title;
+            this.getCustomFields();
+            axios.get(Constants.URL_PAGES + '/' + this.productId)
+              .then((response2) => {
+                const tmp = response2.data._links;
+                for (const d in tmp) {
+                  if (d === 'wp:featuredmedia') {
+                    this.featuredMediaUrl = tmp[d][0].href;
+                    axios.get(this.featuredMediaUrl)
+                      .then((response3) => {
+                        this.photo = response3.data.source_url;
+                      })
+                      .catch((error) => {
+                        window.location.href = '/error';
+                      });
+                  }
+                }
+              })
+              .catch((error) => {
+                window.location.href = '/error';
+              });
+          })
+          .catch((error) => {
+            window.location.href = '/error';
+          });
+    }
+
+    public getCustomFields() {
+      axios.get(Constants.URL_ACF_PAGES + '/' + this.productId)
+        .then((response) => {
+          this.appellation = response.data.acf.appellation;
+        })
+        .catch((error) => {
+          window.location.href = '/error';
+        });
+    }
+}
 </script>
 
 <style lang="scss" scoped>
     .bottle {
         border: 1px grey solid;
         text-align: center;
+    }
+
+    .product-size {
+        height: 380px;
     }
 </style>
