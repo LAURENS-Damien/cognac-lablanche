@@ -2,15 +2,15 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="text-center" v-html="accueilPage.title.rendered"></div>
+                <div class="text-center" v-html="accueilPage.post_title"></div>
                 <Separator/>
-                <div class="text-center" v-html="accueilPage.content.rendered"></div>
+                <div class="text-center" v-html="accueilPage.post_content"></div>
                 <Contact class="pt-5"/>
             </div>
         </div>
         <div class="row pt-5">
             <div class="col-12 px-0">
-                <Products/>
+                <Catalog/>
             </div>
         </div>
         <div class="row">
@@ -25,7 +25,7 @@
     import { Component, Vue } from 'vue-property-decorator';
     import Separator from '@/components/Separator.vue';
     import Contact from '@/components/Contact.vue';
-    import Products from '@/components/Catalog.vue';
+    import Catalog from '@/components/Catalog.vue';
     import Footer from '@/components/Footer.vue';
     import axios from 'axios';
     import * as Constants from '@/ts/constants';
@@ -34,7 +34,7 @@
       components: {
         Separator,
           Contact,
-         Products,
+          Catalog,
            Footer,
       },
     })
