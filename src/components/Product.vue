@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="bottle">
-            <!--        <img alt="" src="@/../test/mocks/pages/products/xo/cognac_xo.jpg">-->
+            <!--        <img alt="" src="@/../test/mocks/pages/products/cognacs/xo/cognac_xo.jpg">-->
             <img alt="" v-bind:src="photo" class="product-size">
         </div>
         <span v-html="productName" class="font-weight-bold"></span>

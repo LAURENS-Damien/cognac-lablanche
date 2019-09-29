@@ -1,0 +1,30 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+{
+"ID":44,
+"post_author":"1",
+"post_date":"2019-09-28 22:37:49",
+"post_date_gmt":"2019-09-28 20:37:49",
+"post_content":"",
+"post_title":"Pineau 5 ans d'\u00e2ge",
+"post_excerpt":"",
+"post_status":"publish",
+"comment_status":"closed",
+"ping_status":"closed",
+"post_password":"",
+"post_name":"pineau-5-ans-dage",
+"to_ping":"",
+"pinged":"",
+"post_modified":"2019-09-28 22:38:08",
+"post_modified_gmt":"2019-09-28 20:38:08",
+"post_content_filtered":"",
+"post_parent":40,
+"guid":"http:\/\/localhost\/?page_id=44",
+"menu_order":1,
+"post_type":"page",
+"post_mime_type":"",
+"comment_count":"0",
+"filter":"raw"
+}

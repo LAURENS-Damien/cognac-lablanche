@@ -1,0 +1,58 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+[
+{
+"ID":40,
+"post_author":"1",
+"post_date":"2019-09-21 22:04:51",
+"post_date_gmt":"2019-09-21 20:04:51",
+"post_content":"",
+"post_title":"Pineau des charentes",
+"post_excerpt":"",
+"post_status":"publish",
+"comment_status":"closed",
+"ping_status":"closed",
+"post_password":"",
+"post_name":"pineau-des-charentes",
+"to_ping":"",
+"pinged":"",
+"post_modified":"2019-09-21 22:04:51",
+"post_modified_gmt":"2019-09-21 20:04:51",
+"post_content_filtered":"",
+"post_parent":27,
+"guid":"http:\/\/localhost\/?page_id=40",
+"menu_order":1,
+"post_type":"page",
+"post_mime_type":"",
+"comment_count":"0",
+"filter":"raw"
+},
+{
+"ID":30,
+"post_author":"1",
+"post_date":"2019-09-12 22:11:15",
+"post_date_gmt":"2019-09-12 20:11:15",
+"post_content":"<!-- wp:paragraph -->\n<p>Les cognacs de la gamme<\/p>\n<!-- \/wp:paragraph -->",
+"post_title":"Cognacs",
+"post_excerpt":"",
+"post_status":"publish",
+"comment_status":"closed",
+"ping_status":"closed",
+"post_password":"",
+"post_name":"cognacs",
+"to_ping":"",
+"pinged":"",
+"post_modified":"2019-09-21 22:05:06",
+"post_modified_gmt":"2019-09-21 20:05:06",
+"post_content_filtered":"",
+"post_parent":27,
+"guid":"http:\/\/localhost\/?page_id=30",
+"menu_order":2,
+"post_type":"page",
+"post_mime_type":"",
+"comment_count":"0",
+"filter":"raw"
+}
+]
