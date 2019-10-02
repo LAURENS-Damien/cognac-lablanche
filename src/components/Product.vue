@@ -1,12 +1,13 @@
 <template>
     <div>
         <div class="bottle">
-            <!--        <img alt="" src="@/../test/mocks/pages/products/cognacs/xo/cognac_xo.jpg">-->
-            <img alt="" v-bind:src="photo" class="product-size">
+                    <img alt="" src="@/../test/mocks/pages/products/cognacs/xo/cognac_xo.jpg">
+<!--            <img alt="" v-bind:src="photo" class="product-size">-->
         </div>
         <span v-html="productName" class="font-weight-bold"></span>
         <br>
-        <span v-html="appellation"></span>
+        <span v-html="appellation"></span><br>
+        <span>{{productPath}}</span>
         <!--<p v-if="fullDescription" v-html="product.post_content">Description</p>-->
     </div>
 </template>
