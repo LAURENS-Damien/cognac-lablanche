@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Watch, Ref } from 'vue-property-decorator';
 import * as Constants from '@/ts/constants';
 import axios from 'axios';
 
@@ -32,21 +32,27 @@ export default class Product extends Vue {
       this.getPhoto();
     }
 
+    // @Ref('productPath')
     public getPhoto() {
-        axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
+    // console.log('MAJ productPath');
+    // console.log(Constants.URL_PRODUCT + '/' + this.productPath);
+    axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
           .then((response) => {
             this.productId = response.data.ID;
             this.productName = response.data.post_title;
             this.getCustomFields();
+            // console.log(Constants.URL_PAGES + '/' + this.productId);
             axios.get(Constants.URL_PAGES + '/' + this.productId)
               .then((response2) => {
                 const tmp = response2.data._links;
                 for (const d in tmp) {
                   if (d === 'wp:featuredmedia') {
                     this.featuredMediaUrl = tmp[d][0].href;
+                    // console.log(this.featuredMediaUrl);
                     axios.get(this.featuredMediaUrl)
                       .then((response3) => {
                         this.photo = response3.data.source_url;
+                        // console.log(this.photo);
                       })
                       .catch((error) => {
                         window.location.href = '/error';
