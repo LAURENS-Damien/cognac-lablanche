@@ -7,7 +7,6 @@
         <span v-html="productName" class="font-weight-bold"></span>
         <br>
         <span v-html="appellation"></span><br>
-        <span>{{productPath}}</span>
         <!--<p v-if="fullDescription" v-html="product.post_content">Description</p>-->
     </div>
 </template>
@@ -29,30 +28,25 @@ export default class Product extends Vue {
     private appellation: string = '';
 
     public created() {
-      this.getPhoto();
+      this.getProduct();
     }
 
-    // @Ref('productPath')
-    public getPhoto() {
-    // console.log('MAJ productPath');
-    // console.log(Constants.URL_PRODUCT + '/' + this.productPath);
+    @Watch('productPath')
+    public getProduct() {
     axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
           .then((response) => {
             this.productId = response.data.ID;
             this.productName = response.data.post_title;
             this.getCustomFields();
-            // console.log(Constants.URL_PAGES + '/' + this.productId);
             axios.get(Constants.URL_PAGES + '/' + this.productId)
               .then((response2) => {
                 const tmp = response2.data._links;
                 for (const d in tmp) {
                   if (d === 'wp:featuredmedia') {
                     this.featuredMediaUrl = tmp[d][0].href;
-                    // console.log(this.featuredMediaUrl);
                     axios.get(this.featuredMediaUrl)
                       .then((response3) => {
                         this.photo = response3.data.source_url;
-                        // console.log(this.photo);
                       })
                       .catch((error) => {
                         window.location.href = '/error';

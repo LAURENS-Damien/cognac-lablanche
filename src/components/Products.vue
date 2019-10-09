@@ -2,8 +2,7 @@
     <div>
         <ul>
             <li v-for="product in products" class="mb-5">
-<!--                {{productsCategory + '/' + product.post_name}}-->
-                <Product v-bind:fullDescription="false" v-bind:productPath="productsCategory + '/' + product.post_name"/>
+                <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath"/>
             </li>
         </ul>
     </div>
@@ -22,30 +21,23 @@ import Product from '@/components/Product.vue';
 })
 export default class Products extends Vue {
   @Prop() private productsCategory!: string;
-  private products = {};
+  private products: any[] = [];
 
   public created() {
-    // console.log('Created');
     this.getProducts();
   }
 
+  @Watch('productsCategory')
   public getProducts() {
     axios.get(Constants.URL_CATALOG + '/' + this.productsCategory)
       .then((response) => {
-        this.products = response.data;
-      })
-      .catch((error) => {
-        window.location.href = '/error';
-      });
-  }
-
-  @Watch('productsCategory')
-  public majProducts() {
-    // console.log('MAJ productsCategory');
-    axios.get(Constants.URL_CATALOG + '/' + this.productsCategory)
-      .then((response) => {
-        this.products = response.data;
-        // console.log(this.products);
+        this.products = [];
+        for (const product in response.data) {
+          if (product !== '') {
+            const productJSON = {productPath : this.productsCategory + '/' + response.data[product].post_name};
+            this.products.push(productJSON);
+          }
+        }
       })
       .catch((error) => {
         window.location.href = '/error';
