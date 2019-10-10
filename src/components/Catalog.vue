@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Notre production</h2>
-        <ul>
+        <ul id="catalogProductsList">
             <li v-for="products in catalog" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name">
                 {{ products.post_title }}
             </li>
@@ -38,8 +38,30 @@ export default class Catalog extends Vue {
             });
     }
 
+    public mounted() {
+      const defaultProductCategories = document.getElementById('catalogProductsList');
+      // console.log('TOTO1');
+      // console.log(defaultProductCategories);
+      if (defaultProductCategories !== null) {
+        // console.log('TOTO2');
+        // console.log(defaultProductCategories.childElementCount);
+        if (defaultProductCategories.firstElementChild !== null) {
+          // console.log(defaultProductCategories.firstElementChild.classList);
+          // console.log('TOTO3');
+          defaultProductCategories.firstElementChild.classList.add('underline');
+        }
+      }
+    }
+
     public changeProductsCategory(event: any): void {
       this.productsCategoryToDisplay = event.target.getAttribute('productsCategoryToDisplay');
+      const catalogProductsList = document.getElementById('catalogProductsList');
+      if (catalogProductsList !== null) {
+        for (const child of catalogProductsList.children) {
+          child.classList.remove('underline');
+        }
+      }
+      event.target.classList.add('underline');
     }
 }
 </script>
