@@ -1,20 +1,29 @@
 <template>
     <div>
         <div class="bottle">
-                    <img alt="" src="@/../test/mocks/pages/products/cognacs/xo/cognac_xo.jpg">
-<!--            <img alt="" v-bind:src="photo" class="product-size">-->
+<!--                    <img alt="" src="@/../test/mocks/pages/products/cognacs/xo/cognac_xo.jpg">-->
+            <img alt="" v-bind:src="photo" v-on:click="goToProductSheet" class="product-size">
         </div>
         <span v-html="productName" class="font-weight-bold"></span>
         <br>
-        <span v-html="appellation"></span><br>
-        <!--<p v-if="fullDescription" v-html="product.post_content">Description</p>-->
+        <span v-html="acf.appellation"></span><br>
+        <div v-if="fullDescription">
+            <p v-html="acf.description">Description</p>
+            <p v-html="acf.cepage">Cépage</p>
+            <p v-html="acf.temperature_ideale_de_service">Température</p>
+            <p v-html="acf.nez">Nez</p>
+            <p v-html="acf.bouche">Bouche</p>
+            <p v-html="acf.suggestions">Suggestions</p>
+            <p v-html="acf.divers">Divers</p>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, Ref } from 'vue-property-decorator';
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 import * as Constants from '@/ts/constants';
 import axios from 'axios';
+import router from '@/router';
 
 @Component
 export default class Product extends Vue {
@@ -25,7 +34,7 @@ export default class Product extends Vue {
     private productName: string = '';
     private featuredMediaUrl: string = '';
     private photo: string = '';
-    private appellation: string = '';
+    private acf: string = '';
 
     public created() {
       this.getProduct();
@@ -66,11 +75,15 @@ export default class Product extends Vue {
     public getCustomFields() {
       axios.get(Constants.URL_ACF_PAGES + '/' + this.productId)
         .then((response) => {
-          this.appellation = response.data.acf.appellation;
+          this.acf = response.data.acf;
         })
         .catch((error) => {
           window.location.href = '/error';
         });
+    }
+
+    public goToProductSheet() {
+      router.push({ name: 'productsheet', params: { productPath: this.productPath }});
     }
 }
 </script>
