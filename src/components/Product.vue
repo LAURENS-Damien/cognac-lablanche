@@ -6,14 +6,22 @@
         </div>
         <span v-html="productName" class="font-weight-bold"></span>
         <br>
-        <span v-html="acf.appellation"></span><br>
-        <div v-if="fullDescription">
+        <span v-html="acf.appellation"></span>
+        <br>
+        <div v-if="fullDescription" class="pt-2">
+            <span class="underline">Description :</span>
             <p v-html="acf.description">Description</p>
+            <span class="underline">Cépage :</span>
             <p v-html="acf.cepage">Cépage</p>
+            <span class="underline">Température :</span>
             <p v-html="acf.temperature_ideale_de_service">Température</p>
+            <span class="underline">Nez :</span>
             <p v-html="acf.nez">Nez</p>
+            <span class="underline">Bouche :</span>
             <p v-html="acf.bouche">Bouche</p>
+            <span class="underline">Suggestions :</span>
             <p v-html="acf.suggestions">Suggestions</p>
+            <span class="underline">Divers :</span>
             <p v-html="acf.divers">Divers</p>
         </div>
     </div>

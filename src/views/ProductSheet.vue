@@ -1,8 +1,6 @@
 <template>
-    <div class="row">
-        <div class="col-12">
-            <Product v-bind:fullDescription="true" v-bind:productPath="$route.params.productPath"/>
-        </div>
+    <div class="p-3">
+        <Product v-bind:fullDescription="true" v-bind:productPath="$route.params.productPath"/>
     </div>
 </template>
 
