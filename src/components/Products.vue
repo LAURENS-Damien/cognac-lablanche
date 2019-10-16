@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li v-for="product in products" class="mb-5">
-                <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath"/>
+                <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath" v-bind:productsCategory="productsCategory"/>
             </li>
         </ul>
     </div>

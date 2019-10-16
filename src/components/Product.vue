@@ -37,6 +37,7 @@ import router from '@/router';
 export default class Product extends Vue {
 
     @Prop() private productPath!: string;
+    @Prop() private productsCategory!: string;
     @Prop() private fullDescription!: boolean;
     private productId: number = 0;
     private productName: string = '';
@@ -91,7 +92,8 @@ export default class Product extends Vue {
     }
 
     public goToProductSheet() {
-      router.push({ name: 'productsheet', params: { productPath: this.productPath }});
+      router.push({ name: 'productsheet',
+                    params: { productPath: this.productPath, productsCategory: this.productsCategory }});
     }
 }
 </script>

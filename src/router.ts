@@ -17,15 +17,10 @@ export default new Router({
       component: Accueil,
     },
     {
-      path: '/productsheet:productPath',
+      path: '/productsheet/:productPath/productsCategory/:productsCategory',
       name: 'productsheet',
       component: ProductSheet,
     },
-    // {
-    //   path: '/home',
-    //   name: 'home',
-    //   component: Home,
-    // },
     {
       path: '/homeorigin',
       name: 'homeorigin',
