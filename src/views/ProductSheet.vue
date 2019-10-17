@@ -2,7 +2,7 @@
     <div class="p-3">
         <Product v-bind:fullDescription="true" v-bind:productPath="$route.params.productPath"/>
         <span class="font-weight-bold underline lead">Notre gamme complète : </span>
-        <Products productsCategory="cognacs"/>
+        <Products v-bind:productsCategory="$route.params.productsCategory"/>
     </div>
 </template>
 
@@ -18,7 +18,5 @@
     },
   })
   export default class ProductSheet extends Vue {
-    @Prop() private productPath!: string;
-    // @Prop() private productsCategory!: string;
   }
 </script>
