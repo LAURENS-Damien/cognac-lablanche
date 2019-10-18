@@ -22,5 +22,5 @@ debug.log*
 *.sw*
 
 # Generates sources
-*.js!vue.config.js
+*.js
 *.js.map

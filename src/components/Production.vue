@@ -1,8 +1,8 @@
 <template>
     <div>
         <h2>Notre production</h2>
-        <ul id="catalogProductsList">
-            <li v-for="(products, index) in catalog" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name" :class="index == 0 ? 'underline' : ''">
+        <ul id="productsList">
+            <li v-for="(products, index) in production" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name" :class="index == 0 ? 'underline' : ''">
                 {{ products.post_title }}
             </li>
         </ul>
@@ -23,14 +23,14 @@ import Products from '@/components/Products.vue';
         Products,
     },
 })
-export default class Catalog extends Vue {
-    private catalog = [];
+export default class Production extends Vue {
+    private production = [];
     private productsCategoryToDisplay = '';
 
     public created() {
         axios.get(Constants.URL_CATALOG)
             .then((response) => {
-                this.catalog = response.data;
+                this.production = response.data;
                 this.productsCategoryToDisplay = response.data[0].post_name;
             })
             .catch((error) => {
@@ -40,9 +40,9 @@ export default class Catalog extends Vue {
 
     public changeProductsCategory(event: any): void {
       this.productsCategoryToDisplay = event.target.getAttribute('productsCategoryToDisplay');
-      const catalogProductsList = document.getElementById('catalogProductsList');
-      if (catalogProductsList !== null) {
-        for (const child of catalogProductsList.children) {
+      const productsList = document.getElementById('productsList');
+      if (productsList !== null) {
+        for (const child of productsList.children) {
           child.classList.remove('underline');
         }
       }

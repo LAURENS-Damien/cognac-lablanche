@@ -10,7 +10,7 @@
         </div>
         <div class="row pt-5">
             <div class="col-12 px-0">
-                <Catalog/>
+                <Production/>
             </div>
         </div>
         <div class="row">
@@ -25,7 +25,7 @@
     import { Component, Vue } from 'vue-property-decorator';
     import Separator from '@/components/Separator.vue';
     import Contact from '@/components/Contact.vue';
-    import Catalog from '@/components/Catalog.vue';
+    import Production from '@/components/Production.vue';
     import Footer from '@/components/Footer.vue';
     import axios from 'axios';
     import * as Constants from '@/ts/constants';
@@ -34,7 +34,7 @@
       components: {
         Separator,
           Contact,
-          Catalog,
+       Production,
            Footer,
       },
     })

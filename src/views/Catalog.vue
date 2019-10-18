@@ -1,14 +1,20 @@
 <template>
     <div class="row">
         <div class="col-12">
-            TOTO
+            <Production/>
         </div>
     </div>
 </template>
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    @Component
+    import Production from '@/components/Production.vue';
+
+    @Component({
+      components: {
+        Production,
+      },
+    })
     export default class Catalog extends Vue {}
 </script>
 
