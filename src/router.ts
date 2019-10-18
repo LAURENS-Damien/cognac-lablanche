@@ -5,6 +5,7 @@ import HomeOrigin from './views/HomeOrigin.vue';
 import About from './views/About.vue';
 import ProductSheet from './views/ProductSheet.vue';
 import Error from './views/Error.vue';
+import Catalog from '@/views/Catalog.vue';
 
 Vue.use(Router);
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/',
       name: 'accueil',
       component: Accueil,
+    },
+    {
+      path: '/catalog',
+      name: 'catalog',
+      component: Catalog,
     },
     {
       path: '/productsheet/:productPath/productsCategory/:productsCategory',

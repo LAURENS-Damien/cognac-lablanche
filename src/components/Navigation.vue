@@ -13,7 +13,7 @@
                     <router-link class="nav-link" to="/error">Photos</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/error">Catalogue</router-link>
+                    <router-link class="nav-link" to="/catalog">Catalogue</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" to="/error">Contact</router-link>
