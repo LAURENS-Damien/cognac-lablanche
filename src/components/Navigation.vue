@@ -10,7 +10,7 @@
                     <router-link class="nav-link" to="/">Accueil</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/error">Photos</router-link>
+                    <router-link class="nav-link" to="/galerie">Galerie</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" to="/catalog">Catalogue</router-link>
