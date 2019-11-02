@@ -13,11 +13,6 @@
                 <Production/>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 px-0">
-                <Footer/>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -26,7 +21,6 @@
     import Separator from '@/components/Separator.vue';
     import Contact from '@/components/Contact.vue';
     import Production from '@/components/Production.vue';
-    import Footer from '@/components/Footer.vue';
     import axios from 'axios';
     import * as Constants from '@/ts/constants';
 
@@ -35,7 +29,6 @@
         Separator,
           Contact,
        Production,
-           Footer,
       },
     })
     export default class Accueil extends Vue {
