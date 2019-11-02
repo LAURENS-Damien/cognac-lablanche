@@ -8,6 +8,7 @@ import Error from './views/Error.vue';
 import Catalog from '@/views/Catalog.vue';
 import Gallery from '@/views/Gallery.vue';
 import Newsletter from '@/views/Newsletter.vue';
+import Order from '@/views/Order.vue';
 
 Vue.use(Router);
 
@@ -33,6 +34,11 @@ export default new Router({
       path: '/newsletter',
       name: 'newsletter',
       component: Newsletter,
+    },
+    {
+      path: '/commander',
+      name: 'commander',
+      component: Order,
     },
     {
       path: '/productsheet/:productPath/productsCategory/:productsCategory',

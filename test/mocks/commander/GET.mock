@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+{
+"id":78,
+"title":"Commander",
+"content":"<!-- wp:paragraph -->\n<p>Bon de commande 2018 : <a rel=\"noreferrer noopener\" aria-label=\" (s\u2019ouvre dans un nouvel onglet)\" href=\"http:\/\/localhost\/wp-content\/uploads\/2019\/11\/bon-de-commande-2018.pdf\" target=\"_blank\">T\u00e9l\u00e9charger<\/a><\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Vente en ligne de nos produits avec un compte s\u00e9curis\u00e9 PayPal : <a rel=\"noreferrer noopener\" aria-label=\" (s\u2019ouvre dans un nouvel onglet)\" href=\"http:\/\/cognac-lablanche.delicenet.com\/produits\" target=\"_blank\">KELDELICE<\/a><\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Lien avec le site internet des \u00e9tapes du Cognac  :  <a rel=\"noreferrer noopener\" aria-label=\" (s\u2019ouvre dans un nouvel onglet)\" href=\"http:\/\/www.cognacetapes.com\/\" target=\"_blank\">CognacEtapes<\/a><\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><\/p>\n<!-- \/wp:paragraph -->"
+}
