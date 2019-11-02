@@ -13,7 +13,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .breadcrumb {
         background-color: transparent;
         padding-left: 0;
