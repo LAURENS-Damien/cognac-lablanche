@@ -19,7 +19,7 @@
                     <router-link class="nav-link" to="/error">Contact</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/error">Newsletter</router-link>
+                    <router-link class="nav-link" to="/newsletter">Newsletter</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" to="/error">Commander</router-link>

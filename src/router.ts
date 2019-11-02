@@ -7,6 +7,7 @@ import ProductSheet from './views/ProductSheet.vue';
 import Error from './views/Error.vue';
 import Catalog from '@/views/Catalog.vue';
 import Gallery from '@/views/Gallery.vue';
+import Newsletter from '@/views/Newsletter.vue';
 
 Vue.use(Router);
 
@@ -27,6 +28,11 @@ export default new Router({
       path: '/galerie',
       name: 'gallery',
       component: Gallery,
+    },
+    {
+      path: '/newsletter',
+      name: 'newsletter',
+      component: Newsletter,
     },
     {
       path: '/productsheet/:productPath/productsCategory/:productsCategory',
