@@ -9,6 +9,7 @@ import Catalog from '@/views/Catalog.vue';
 import Gallery from '@/views/Gallery.vue';
 import Newsletter from '@/views/Newsletter.vue';
 import Order from '@/views/Order.vue';
+import Contact from '@/views/Contact.vue';
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/catalog',
       name: 'catalog',
       component: Catalog,
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact,
     },
     {
       path: '/galerie',

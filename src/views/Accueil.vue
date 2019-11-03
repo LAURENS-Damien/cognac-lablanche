@@ -5,7 +5,7 @@
                 <div class="text-center" v-html="accueilPage.post_title"></div>
                 <Separator/>
                 <div class="text-center" v-html="accueilPage.post_content"></div>
-                <Contact class="pt-5"/>
+                <Coordinates class="text-center pt-3"/>
             </div>
         </div>
         <div class="row pt-5">
@@ -19,15 +19,15 @@
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
     import Separator from '@/components/Separator.vue';
-    import Contact from '@/components/Contact.vue';
     import Production from '@/components/Production.vue';
     import axios from 'axios';
     import * as Constants from '@/ts/constants';
+    import Coordinates from '@/components/Coordinates.vue';
 
     @Component({
       components: {
+        Coordinates,
         Separator,
-          Contact,
        Production,
       },
     })
