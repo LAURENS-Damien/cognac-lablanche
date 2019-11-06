@@ -24,15 +24,6 @@
                 <li class="nav-item">
                     <router-link class="nav-link" to="/commander">Commander</router-link>
                 </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/home">Home</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/homeorigin">HomeOrigin</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/about">About</router-link>
-                </li>
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>

@@ -52,16 +52,6 @@ export default new Router({
       component: ProductSheet,
     },
     {
-      path: '/homeorigin',
-      name: 'homeorigin',
-      component: HomeOrigin,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About,
-    },
-    {
       path: '*',
       name: 'error',
       component: Error,
