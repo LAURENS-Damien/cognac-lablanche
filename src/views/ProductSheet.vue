@@ -27,7 +27,7 @@
       this.items = [
         {
           text: 'Catalogue',
-          href: '/catalog',
+          href: '/catalogue',
         },
         {
           text: 'Fiche Produit',
