@@ -1,7 +1,6 @@
 <template>
     <div>
         <div class="bottle">
-<!--                    <img alt="" src="@/../test/mocks/pages/products/cognacs/xo/cognac_xo.jpg">-->
             <img alt="" v-bind:src="photo" v-on:click="goToProductSheet" class="product-size">
         </div>
         <span v-html="productName" class="font-weight-bold"></span>
@@ -66,18 +65,18 @@ export default class Product extends Vue {
                       .then((response3) => {
                         this.photo = response3.data.source_url;
                       })
-                      .catch((error) => {
-                        window.location.href = '/error';
+                      .catch(() => {
+                        window.location.href = '/erreur';
                       });
                   }
                 }
               })
-              .catch((error) => {
-                window.location.href = '/error';
+              .catch(() => {
+                window.location.href = '/erreur';
               });
           })
-          .catch((error) => {
-            window.location.href = '/error';
+          .catch(() => {
+            window.location.href = '/erreur';
           });
     }
 
@@ -86,8 +85,8 @@ export default class Product extends Vue {
         .then((response) => {
           this.acf = response.data.acf;
         })
-        .catch((error) => {
-          window.location.href = '/error';
+        .catch(() => {
+          window.location.href = '/erreur';
         });
     }
 

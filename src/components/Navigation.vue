@@ -13,7 +13,7 @@
                     <router-link class="nav-link" to="/galerie">Galerie</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/catalog">Catalogue</router-link>
+                    <router-link class="nav-link" to="/catalogue">Catalogue</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" to="/contact">Contact</router-link>
@@ -41,10 +41,5 @@
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
   @Component
-  export default class Navigation extends Vue {
-
-  }
+  export default class Navigation extends Vue {}
 </script>
-
-<style lang="scss" scoped>
-</style>

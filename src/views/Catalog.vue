@@ -17,7 +17,3 @@
     })
     export default class Catalog extends Vue {}
 </script>
-
-<style scoped>
-
-</style>

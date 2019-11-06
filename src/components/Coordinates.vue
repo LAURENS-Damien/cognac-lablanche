@@ -18,13 +18,9 @@
           .then((response) => {
             this.contact = response.data;
           })
-          .catch((error) => {
-            window.location.href = '/error';
+          .catch(() => {
+            window.location.href = '/erreur';
           });
       }
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

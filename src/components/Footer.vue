@@ -14,7 +14,7 @@
 
 <style lang="scss" scoped>
     .footer {
-        background-color: #343a40;  /* TODO : A changer par la constante de colors.scss*/
+        background-color: $hf-color;
         color: white;
     }
 </style>

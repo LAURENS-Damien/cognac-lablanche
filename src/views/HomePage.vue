@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="text-center" v-html="accueilPage.post_title"></div>
+                <div class="text-center" v-html="homePage.title"></div>
                 <Separator/>
-                <div class="text-center" v-html="accueilPage.post_content"></div>
+                <div class="text-center" v-html="homePage.content"></div>
                 <Coordinates class="text-center pt-3"/>
             </div>
         </div>
@@ -31,16 +31,16 @@
        Production,
       },
     })
-    export default class Accueil extends Vue {
-      private accueilPage = {};
+    export default class HomePage extends Vue {
+      private homePage = {};
 
       public created() {
-        axios.get(Constants.URL_PAGE_ACCUEIL)
+        axios.get(Constants.URL_HOME_PAGE)
           .then((response) => {
-            this.accueilPage = response.data;
+            this.homePage = response.data;
           })
-          .catch((error) => {
-            window.location.href = '/error';
+          .catch(() => {
+            window.location.href = '/erreur';
           });
       }
     }

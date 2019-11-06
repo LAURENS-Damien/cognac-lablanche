@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-  import {Component, Vue} from 'vue-property-decorator';
+  import { Component, Vue } from 'vue-property-decorator';
   import Breadcrumb from '@/components/Breadcrumb.vue';
   import Product from '@/components/Product.vue';
   import Products from '@/components/Products.vue';
@@ -21,7 +21,7 @@
     },
   })
   export default class ProductSheet extends Vue {
-    private items: any[] = [];
+    private items = {};
 
     public created() {
       this.items = [

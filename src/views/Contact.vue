@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-  import {Component, Vue} from 'vue-property-decorator';
+  import { Component, Vue } from 'vue-property-decorator';
   import axios from 'axios';
   import * as Constants from '@/ts/constants';
   import Coordinates from '@/components/Coordinates.vue';
@@ -24,8 +24,8 @@
         .then((response) => {
           this.contact = response.data;
         })
-        .catch((error) => {
-          window.location.href = '/error';
+        .catch(() => {
+          window.location.href = '/erreur';
         });
     }
   }

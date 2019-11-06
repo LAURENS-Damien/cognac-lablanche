@@ -78,7 +78,7 @@
 </template>
 
 <script lang="ts">
-  import {Component, Vue} from 'vue-property-decorator';
+  import { Component, Vue } from 'vue-property-decorator';
   import * as Constants from '@/ts/constants';
   import axios from 'axios';
 
@@ -134,6 +134,3 @@
     }
   }
 </script>
-
-<style lang="scss" scoped>
-</style>

@@ -10,21 +10,21 @@
 </template>
 
 <script lang="ts">
-  import {Component, Vue} from 'vue-property-decorator';
+  import { Component, Vue } from 'vue-property-decorator';
   import * as Constants from '@/ts/constants';
   import axios from 'axios';
 
   @Component
   export default class Order extends Vue {
-    private order: any[] = [];
+    private order = {};
 
     public created() {
       axios.get(Constants.URL_ORDER)
         .then((response) => {
           this.order = response.data;
         })
-        .catch((error) => {
-          window.location.href = '/error';
+        .catch(() => {
+          window.location.href = '/erreur';
         });
     }
   }

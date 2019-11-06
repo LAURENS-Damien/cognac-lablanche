@@ -2,12 +2,12 @@
     <div>
         <h2>Notre production</h2>
         <ul id="productsList">
-            <li v-for="(products, index) in production" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name" :class="index == 0 ? 'underline' : ''">
+            <li v-for="(products, index) in production" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name" :class="index === 0 ? 'underline' : ''">
                 {{ products.post_title }}
             </li>
         </ul>
         <div class="px-3">
-            <Products v-if="this.productsCategoryToDisplay != ''" v-bind:productsCategory="this.productsCategoryToDisplay"/>
+            <Products v-if="this.productsCategoryToDisplay !== ''" v-bind:productsCategory="this.productsCategoryToDisplay"/>
         </div>
     </div>
 </template>
@@ -33,8 +33,8 @@ export default class Production extends Vue {
                 this.production = response.data;
                 this.productsCategoryToDisplay = response.data[0].post_name;
             })
-            .catch((error) => {
-              window.location.href = '/error';
+            .catch(() => {
+              window.location.href = '/erreur';
             });
     }
 
@@ -50,7 +50,3 @@ export default class Production extends Vue {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

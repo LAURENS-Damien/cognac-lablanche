@@ -12,7 +12,7 @@
 import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
 import * as Constants from '@/ts/constants';
 import axios from 'axios';
-import Product from '@/components/Product.vue';
+import Product from './Product.vue';
 
 @Component({
   components: {
@@ -34,13 +34,15 @@ export default class Products extends Vue {
         this.products = [];
         for (const product in response.data) {
           if (product !== '') {
-            const productJSON = {productPath : this.productsCategory + '/' + response.data[product].post_name};
+            const productJSON = {
+              productPath : this.productsCategory + '/' + response.data[product].post_name,
+            };
             this.products.push(productJSON);
           }
         }
       })
-      .catch((error) => {
-        window.location.href = '/error';
+      .catch(() => {
+        window.location.href = '/erreur';
       });
   }
 }

@@ -12,16 +12,15 @@
 
   @Component
   export default class Gallery extends Vue {
-    private gallery: any[] = [];
-    // private galleryJSON = {};
+    private gallery = {};
 
     public created() {
       axios.get(Constants.URL_GALLERY)
         .then((response) => {
           this.gallery = response.data;
         })
-        .catch((error) => {
-          window.location.href = '/error';
+        .catch(() => {
+          window.location.href = '/erreur';
         });
     }
 
