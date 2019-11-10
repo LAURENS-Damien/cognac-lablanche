@@ -7,9 +7,11 @@
 </template>
 
 <style lang="scss">
-body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-}
+  @import url('https://fonts.googleapis.com/css?family=Farro&display=swap');
+
+  body {
+    font-family: 'Farro', cursive;
+  }
 </style>
 <script>
     import { Component, Vue } from 'vue-property-decorator';
