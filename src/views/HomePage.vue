@@ -2,13 +2,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="text-center" v-html="homePage.title"></div>
+                <div class="row pt-3" v-html="homePage.image"></div>
+                <h1 class="text-center" v-html="homePage.title"></h1>
                 <Separator/>
                 <div class="text-center" v-html="homePage.content"></div>
                 <Coordinates class="text-center pt-3"/>
             </div>
         </div>
-        <div class="row pt-5">
+        <div class="row pt-4">
             <div class="col-12 px-0">
                 <Production/>
             </div>

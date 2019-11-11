@@ -26,11 +26,3 @@
 
   }
 </script>
-
-<style lang="scss">
-    .gallery {
-        & img {
-            width: 100%;
-        }
-    }
-</style>

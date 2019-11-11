@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div class="container-fluid">
         <h2>Notre production</h2>
         <ul id="productsList">
             <li v-for="(products, index) in production" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name" :class="index === 0 ? 'underline' : ''">
                 {{ products.post_title }}
             </li>
         </ul>
-        <div class="px-3">
+        <div class="px-1">
             <Products v-if="this.productsCategoryToDisplay !== ''" v-bind:productsCategory="this.productsCategoryToDisplay"/>
         </div>
     </div>
