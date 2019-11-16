@@ -10,6 +10,7 @@ import Contact from '@/views/Contact.vue';
 import HomePage from '@/views/HomePage.vue';
 import Historic from '@/views/Historic.vue';
 import VineyardManagement from '@/views/VineyardManagement.vue';
+import CampingCarParking from '@/views/CampingCarParking.vue';
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/conduite-vignoble',
       name: 'conduiteVignoble',
       component: VineyardManagement,
+    },
+    {
+      path: '/parking-camping-car',
+      name: 'parkingCampingCar',
+      component: CampingCarParking,
     },
     {
       path: '/catalogue',
