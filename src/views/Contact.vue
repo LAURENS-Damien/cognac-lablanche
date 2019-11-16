@@ -1,5 +1,5 @@
 <template>
-    <div class="contact container-fluid limit-max-width my-lg-5">
+    <div class="contact container-fluid limit-max-width my-3 my-lg-5">
         <h1 class="my-lg-5">{{ contact.title }}</h1>
         <Coordinates/>
     </div>

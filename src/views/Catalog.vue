@@ -1,5 +1,5 @@
 <template>
-    <div class="catalog container-fluid limit-max-width">
+    <div class="catalog container-fluid limit-max-width mt-3">
         <div class="row mt-lg-5">
             <div class="col-12">
                 <Production/>

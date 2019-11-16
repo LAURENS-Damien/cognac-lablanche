@@ -1,6 +1,6 @@
 <template>
-    <div class="newsletter container-fluid limit-max-width">
-        <h1 class="my-lg-5">Inscription à la newsletter</h1>
+    <div class="newsletter container-fluid limit-max-width my-3 my-lg-5">
+        <h1 class="mb-4">Inscription à la newsletter</h1>
         <b-form id="post-newsletter" @submit.prevent="postForm" @reset="resetForm">
             <b-form-group id="email-group" label="Email (obligatoire) :" label-for="email">
                 <b-form-input

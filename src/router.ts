@@ -1,7 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HomeOrigin from './views/HomeOrigin.vue';
-import About from './views/About.vue';
 import ProductSheet from './views/ProductSheet.vue';
 import Error from './views/Error.vue';
 import Catalog from '@/views/Catalog.vue';
@@ -10,6 +8,7 @@ import Newsletter from '@/views/Newsletter.vue';
 import Order from '@/views/Order.vue';
 import Contact from '@/views/Contact.vue';
 import HomePage from '@/views/HomePage.vue';
+import Historic from '@/views/Historic.vue';
 
 Vue.use(Router);
 
@@ -20,6 +19,11 @@ export default new Router({
       path: '/',
       name: 'accueil',
       component: HomePage,
+    },
+    {
+      path: '/historique',
+      name: 'historique',
+      component: Historic,
     },
     {
       path: '/catalogue',

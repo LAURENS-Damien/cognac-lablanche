@@ -9,6 +9,11 @@
                 <li class="nav-item">
                     <router-link class="nav-link" to="/">Accueil</router-link>
                 </li>
+                <b-nav-item-dropdown text="L'exploitation" right>
+                    <b-dropdown-item href="/historique">Historique</b-dropdown-item>
+                    <b-dropdown-item href="#">Conduite du vignoble</b-dropdown-item>
+                    <b-dropdown-item href="#">Parking camping car</b-dropdown-item>
+                </b-nav-item-dropdown>
                 <li class="nav-item">
                     <router-link class="nav-link" to="/galerie">Galerie</router-link>
                 </li>
