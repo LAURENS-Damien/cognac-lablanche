@@ -1,8 +1,9 @@
 <template>
-        <div class="gallery container-fluid pt-3">
-            <div class="row" v-html="gallery.content">
-            </div>
+    <div class="gallery container-fluid limit-max-width pt-3">
+        <h1 class="my-lg-5">{{ gallery.title }}</h1>
+        <div class="row" v-html="gallery.content">
         </div>
+    </div>
 </template>
 
 <script lang="ts">

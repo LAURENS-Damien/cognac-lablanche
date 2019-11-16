@@ -1,8 +1,8 @@
 <template>
     <div class="container-fluid">
-        <h2>Notre production</h2>
-        <ul id="productsList">
-            <li v-for="(products, index) in production" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name" :class="index === 0 ? 'underline' : ''">
+        <h2 class="text-lg-center">Notre production</h2>
+        <ul id="productsList" class="text-lg-center">
+            <li v-for="(products, index) in production" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name" :class="index === 0 ? 'underline' : ''" class="d-lg-inline-block px-lg-3">
                 {{ products.post_title }}
             </li>
         </ul>

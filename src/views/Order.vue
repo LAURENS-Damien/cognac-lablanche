@@ -1,9 +1,9 @@
 <template>
-    <div class="container-fluid">
+    <div class="order container-fluid limit-max-width">
         <div class="row">
             <div class="col-12">
-                <h1>{{ order.title }}</h1>
-                <p class="pt-3" v-html="order.content"></p>
+                <h1 class="my-lg-5">{{ order.title }}</h1>
+                <p class="pb-5" v-html="order.content"></p>
             </div>
         </div>
     </div>

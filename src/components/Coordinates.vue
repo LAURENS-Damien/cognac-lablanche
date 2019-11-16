@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div v-html="contact.content"></div>
+    <div class="container-fluid">
+        <div class="row" v-html="contact.content"></div>
     </div>
 </template>
 

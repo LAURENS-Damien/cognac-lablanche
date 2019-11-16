@@ -1,7 +1,9 @@
 <template>
-    <div class="row">
-        <div class="col-12">
-            <Production/>
+    <div class="catalog container-fluid limit-max-width">
+        <div class="row mt-lg-5">
+            <div class="col-12">
+                <Production/>
+            </div>
         </div>
     </div>
 </template>

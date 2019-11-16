@@ -1,13 +1,13 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="row pt-3" v-html="homePage.image"></div>
+    <div class="home-page container-fluid limit-max-width">
+        <div class="row mt-lg-5">
+            <div class="col-12 col-lg-6 pt-3" v-html="homePage.image"></div>
+            <div class="col-12 col-lg-6">
                 <h1 class="text-center" v-html="homePage.title"></h1>
                 <Separator/>
                 <div class="text-center" v-html="homePage.content"></div>
-                <Coordinates class="text-center pt-3"/>
             </div>
+            <Coordinates class="col-12 pt-3 pt-lg-5 text-center "/>
         </div>
         <div class="row pt-4">
             <div class="col-12 px-0">
