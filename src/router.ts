@@ -9,6 +9,7 @@ import Order from '@/views/Order.vue';
 import Contact from '@/views/Contact.vue';
 import HomePage from '@/views/HomePage.vue';
 import Historic from '@/views/Historic.vue';
+import VineyardManagement from '@/views/VineyardManagement.vue';
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/historique',
       name: 'historique',
       component: Historic,
+    },
+    {
+      path: '/conduite-vignoble',
+      name: 'conduiteVignoble',
+      component: VineyardManagement,
     },
     {
       path: '/catalogue',
