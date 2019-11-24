@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+{
+"acf":{
+"appellation":"A.O.C Cognac",
+"description":"Ce Cognac est \u00e9labor\u00e9 par distillation de vin issu de vignes en appellation Petite Champagne C'est un Cognac qui a vieillit pendant plus de 3 ann\u00e9es. Il titre environ 60 %volumique .Il est donc destin\u00e9 que pour le Brulot Charentais et la cuisine.",
+"cepage":"Exclusivement \u00e0 partir d'Ugni-blanc",
+"temperature_ideale_de_service":"Au choix selon son emploi",
+"nez":"Tr\u00e8s riche car il est jeune et puissant.",
+"bouche":"",
+"suggestions":"Il est destin\u00e9 \u00e0 l'\u00e9laboration du Brulot Charentais avec ses tasses sp\u00e9ciale Brulot en terre cuite fabriqu\u00e9 par un artisan potier locale .Le service est accompagn\u00e9 de galet pour pouvoir poser la tasse ..",
+"divers":"Cette recette ancestrale du Brulot Charentais remis au gout du jour apr\u00e8s avoir \u00e9t\u00e9 mis aux oubliettes pendant des d\u00e9cennies. Il plaira \u00e9norm\u00e9ment lors de vos soir\u00e9es et \u00e9gaillera vos fins de repas. Il faut noter que les poteries sont tr\u00e8s belles et diff\u00e9rentes par rapport \u00e0 ce que l'on trouve sur le march\u00e9 habituellement."
+}
+}

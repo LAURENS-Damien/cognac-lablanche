@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+{
+"id":148,
+"title":"Conduite du vignoble",
+"content":"<p>Nous pratiquons , depuis 1996 , une d\u00e9marche de culture raisonn\u00e9e .<br>Notre exploitation est , depuis 2013 , une des fermes de r\u00e9f\u00e9rence au niveau national pour tester la r\u00e9duction de produits phytosanitaires .<br>Effectivement en collaboration avec la chambre d'agriculture , nous travaillons sur plusieurs points afin d'utiliser au minimum les produits .<br>Pour se faire nous tenons compte de la climatologie avec l'aide d'une station m\u00e9t\u00e9o , du stade des maladies qui va nous permetre de traiter juste quand il le faudra et \u00e0 la dose n\u00e9c\u00e9ssaire .<br>Cel\u00e0 concerne aussi bien les d\u00e9sherbants que les traitements fongicides .<br>Ce r\u00e9seau nationnal a \u00e9t\u00e9 mi en place par le gouvernement suite au plan \u00e9cophyto avec pour objectif d'i\u00e7i 2022 , la r\u00e9duction de moiti\u00e9 , l'utilisation de produits .<br>Toutes nos op\u00e9rations r\u00e9alis\u00e9es sur nos vignes sont raisonn\u00e9s au maximum, en n'employant plus d'acaricides (insecticides contre les araign\u00e9es de la vigne) et en laissant des bandes enherb\u00e9es entre les rangs pour employer moins de d\u00e9sherbants.<br> Nos parcelles \u00e0 destination des Vins de Pays sont &nbsp;livr\u00e9es au sein d'une cave faite en commun entre plusieurs viticulteurs dont le si\u00e8ge social est \u00e0 Segonzac en Charente.<br>Elle porte le nom de la \u00ab Maison des Maines. Ces parcelles contiennent cinq c\u00e9pages nobles qui sont le Cabernet Sauvignon, le Cabernet Franc, le Merlot, le Chardonnay et le Sauvignon.<br>Les densit\u00e9s de plantation sont \u00e0 plus de 4000 ceps par hectare de vigne et les rendements sont volontairement limit\u00e9s \u00e0 55 HL de vin par hectare.  <\/p>\n",
+"image":"<figure class=\"wp-block-image is-resized full-width\"><img src=\"http:\/\/localhost\/wp-content\/uploads\/2019\/11\/photo_vignes.jpg\" alt=\"\" class=\"wp-image-151\" width=\"390\" height=\"293\"\/><\/figure>"
+}

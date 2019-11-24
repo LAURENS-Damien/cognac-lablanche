@@ -1,5 +1,4 @@
 // URLS REST
-export const URL_PAGES = process.env.VUE_APP_API_PATH + '/pages';
 export const URL_HOME_PAGE = process.env.VUE_APP_API_PATH + '/accueil';
 export const URL_HISTORIC = process.env.VUE_APP_API_PATH + '/historique';
 export const URL_VINEYARD_MANAGEMENT = process.env.VUE_APP_API_PATH + '/conduite-vignoble';

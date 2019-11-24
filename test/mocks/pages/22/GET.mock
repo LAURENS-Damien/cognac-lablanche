@@ -3,105 +3,14 @@ Content-Type: application/json; charset=utf-8
 Access-Control-Allow-Origin: *
 
 {
-"id":22,
-"date":"2019-09-12T22:07:00",
-"date_gmt":"2019-09-12T20:07:00",
-"guid":{
-"rendered":"http:\/\/localhost\/?page_id=22"
-},
-"modified":"2019-09-18T21:36:30",
-"modified_gmt":"2019-09-18T19:36:30",
-"slug":"cognac-xo",
-"status":"publish",
-"type":"page",
-"link":"http:\/\/localhost\/catalogue\/cognacs\/cognac-xo\/",
-"title":{
-"rendered":"Cognac XO"
-},
-"content":{
-"rendered":"\n<pre class=\"wp-block-preformatted\">Ce Cognac est \u00e9labor\u00e9 par distillation de vin issu de vignes en appellation Petite Champagne C'est un Cognac qui a vieillit pendant plus de 30 ann\u00e9es. Il est l'\u00e2me et le c\u0153ur de notre famille.<\/pre>\n",
-"protected":false
-},
-"excerpt":{
-"rendered":"<p>Ce Cognac est \u00e9labor\u00e9 par distillation de vin issu de vignes en appellation Petite Champagne C&rsquo;est un Cognac qui a vieillit pendant plus de 30 ann\u00e9es. Il est l&rsquo;\u00e2me et le c\u0153ur de notre famille.<\/p>\n",
-"protected":false
-},
-"author":1,
-"featured_media":25,
-"parent":30,
-"menu_order":2,
-"comment_status":"closed",
-"ping_status":"closed",
-"template":"",
-"meta":[
-
-],
 "acf":{
-"appellation":"A.O.C Cognac"
-},
-"_links":{
-"self":[
-{
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/pages\/22"
-}
-],
-"collection":[
-{
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/pages"
-}
-],
-"about":[
-{
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/types\/page"
-}
-],
-"author":[
-{
-"embeddable":true,
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/users\/1"
-}
-],
-"replies":[
-{
-"embeddable":true,
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/comments?post=22"
-}
-],
-"version-history":[
-{
-"count":2,
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/pages\/22\/revisions"
-}
-],
-"predecessor-version":[
-{
-"id":35,
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/pages\/22\/revisions\/35"
-}
-],
-"up":[
-{
-"embeddable":true,
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/pages\/30"
-}
-],
-"wp:featuredmedia":[
-{
-"embeddable":true,
-"href":"http:\/\/localhost:9001\/media\/25"
-}
-],
-"wp:attachment":[
-{
-"href":"http:\/\/localhost\/wp-json\/wp\/v2\/media?parent=22"
-}
-],
-"curies":[
-{
-"name":"wp",
-"href":"https:\/\/api.w.org\/{rel}",
-"templated":true
-}
-]
+"appellation":"A.O.C Cognac",
+"description":"Ce Cognac est \u00e9labor\u00e9 par distillation de vin issu de vignes en appellation Petite Champagne C'est un Cognac qui a vieillit pendant plus de 30 ann\u00e9es. Il est l'\u00e2me et le c\u0153ur de notre famille.",
+"cepage":"Exclusivement \u00e0 partir d'Ugni-blanc",
+"temperature_ideale_de_service":"A temp\u00e9rature ambiante pour le digestif",
+"nez":"Exceptionnel avec une note narcisse et bois\u00e9e tr\u00e8s fine",
+"bouche":"Il a une harmonie et.une richesse en bouche qui nous indique qu'il faut le d\u00e9guster avec d\u00e9licatesse",
+"suggestions":"Il se consomme en digestif, dans un verre ballon et en prenant le temps de l'apprivoiser.",
+"divers":"C'est un produit d'un \u00e2ge exceptionnel pour un XO qui est par ce fait rare et prestigieux."
 }
 }

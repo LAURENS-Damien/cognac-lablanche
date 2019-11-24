@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+{
+"acf":{
+"appellation":"A d\u00e9finir",
+"description":"Elabor\u00e9 \u00e0 partir de Pineau des Charentes et de P\u00e9tillant de raisin blanc .\r\nMariage int\u00e9ressant entre les aromes du Pineau des Charentes blanc et la vivacit\u00e9 du P\u00e9tillant de raisin .\r\nA consommer tr\u00e8s frais , en ap\u00e9ritif ou avec un dessert.",
+"cepage":"A d\u00e9finir",
+"temperature_ideale_de_service":"A d\u00e9finir",
+"nez":"A d\u00e9finir",
+"bouche":"A d\u00e9finir",
+"suggestions":"A d\u00e9finir",
+"divers":"A d\u00e9finir"
+}
+}

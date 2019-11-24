@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+{
+"id":155,
+"title":"Parking camping car",
+"content":"<p>Nous pouvons recevoir des campings car sur le parking \u00e0 cette usage .Il est ombrag\u00e9, entretenu et propre.<br>A disposition les toilettes de notre magasin, possibilit\u00e9 de prendre de l'eau mais pas de branchement \u00e9lectrique.<br>Ce site est \u00e0 disposition gratuitement dans le cadre de France Passion.<br>Il y a sur place des contenaires \u00e0 poubelles \u00e0 disposition.Nous pouvons vous faire visiter les lieux sur demande avec une d\u00e9gustation gratuite \u00e0 la cl\u00e9 .&nbsp;\n\n<\/p>\n",
+"image":"<figure class=\"wp-block-image is-resized full-width\"><img src=\"http:\/\/localhost\/wp-content\/uploads\/2019\/11\/photo_parking_campings_cars.jpg\" alt=\"\" class=\"wp-image-156\" width=\"594\" height=\"446\"\/><\/figure>"
+}

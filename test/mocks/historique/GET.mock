@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+
+{
+"id":139,
+"title":"Historique",
+"content":"<p>Nous sommes deux fr\u00e8res, Patrick et Laurent a \u00eatre install\u00e9s sur l'exploitation familiale qui a pris naissance il y a plusieurs d\u00e9cennies au d\u00e9but des ann\u00e9es 1900 .<br>Notre propri\u00e9t\u00e9 s'\u00e9tend principalement sur la commune de Chadenac qui est un des points les plus haut du d\u00e9partement avec une altitude maximale de 109 m\u00e8tres qui lui conf\u00e8re donc de tr\u00e8s bons coteaux. Nous sommes donc au c\u0153ur de l'Appellation du Cognac dans l'appellation Petite Champagne.<br>Notre propri\u00e9t\u00e9 s'\u00e9tend sur 84 Hectares dont 50 de vignes permettant la production de Cognac, de Pineau des Charentes et de vins de Pays.<br>Notre exploitation est en conduite de culture raisonn\u00e9e pour une meilleur qualit\u00e9 de nos productions et ainsi un meilleur respect de l'environnement .  <\/p>\n",
+"image":"<figure class=\"wp-block-image full-width\"><img src=\"http:\/\/localhost\/wp-content\/uploads\/2019\/11\/historique.jpg\" alt=\"\" class=\"wp-image-140\"\/><\/figure>"
+}

@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <div class="bottle">
-            <img alt="" v-bind:src="photo" v-on:click="goToProductSheet" class="product-size">
-        </div>
-        <span v-html="productName" class="font-weight-bold"></span>
+    <div class="product">
+        <div class="bottle product-size" v-html="product.image" v-on:click="goToProductSheet"></div>
+        <span v-html="product.title" class="font-weight-bold"></span>
         <br>
         <span v-html="acf.appellation"></span>
         <br>
@@ -40,9 +38,8 @@ export default class Product extends Vue {
     @Prop() private fullDescription!: boolean;
     private productId: number = 0;
     private productName: string = '';
-    private featuredMediaUrl: string = '';
-    private photo: string = '';
     private acf: string = '';
+    private product = {};
 
     public created() {
       this.getProduct();
@@ -52,28 +49,10 @@ export default class Product extends Vue {
     public getProduct() {
     axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
           .then((response) => {
-            this.productId = response.data.ID;
+            this.productId = response.data.id;
             this.productName = response.data.post_title;
             this.getCustomFields();
-            axios.get(Constants.URL_PAGES + '/' + this.productId)
-              .then((response2) => {
-                const tmp = response2.data._links;
-                for (const d in tmp) {
-                  if (d === 'wp:featuredmedia') {
-                    this.featuredMediaUrl = tmp[d][0].href;
-                    axios.get(this.featuredMediaUrl)
-                      .then((response3) => {
-                        this.photo = response3.data.source_url;
-                      })
-                      .catch(() => {
-                        window.location.href = '/erreur';
-                      });
-                  }
-                }
-              })
-              .catch(() => {
-                window.location.href = '/erreur';
-              });
+            this.product = response.data;
           })
           .catch(() => {
             window.location.href = '/erreur';

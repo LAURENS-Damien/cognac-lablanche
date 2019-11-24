@@ -3,28 +3,7 @@ Content-Type: application/json; charset=utf-8
 Access-Control-Allow-Origin: *
 
 {
-"ID":36,
-"post_author":"1",
-"post_date":"2019-09-18 21:29:24",
-"post_date_gmt":"2019-09-18 19:29:24",
-"post_content":"<!-- wp:paragraph -->\n<p>Cognac VS<\/p>\n<!-- \/wp:paragraph -->",
-"post_title":"Cognac VS",
-"post_excerpt":"",
-"post_status":"publish",
-"comment_status":"closed",
-"ping_status":"closed",
-"post_password":"",
-"post_name":"cognac-vs",
-"to_ping":"",
-"pinged":"",
-"post_modified":"2019-09-18 21:36:36",
-"post_modified_gmt":"2019-09-18 19:36:36",
-"post_content_filtered":"",
-"post_parent":30,
-"guid":"http:\/\/localhost\/?page_id=36",
-"menu_order":1,
-"post_type":"page",
-"post_mime_type":"",
-"comment_count":"0",
-"filter":"raw"
+"id":36,
+"title":"Cognac VS",
+"image":"<figure class=\"wp-block-image\"><img src=\"http:\/\/localhost\/wp-content\/uploads\/2019\/11\/cognac_vs.png\" alt=\"\" class=\"wp-image-192\"\/><\/figure>"
 }
