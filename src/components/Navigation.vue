@@ -2,7 +2,7 @@
     <b-navbar toggleable="lg" type="dark" variant="dark">
         <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
 
-        <b-navbar-brand><img alt="Vue logo" src="../assets/logo.png"></b-navbar-brand>
+        <b-navbar-brand><img alt="Vue logo" v-bind:src="iconUrl"></b-navbar-brand>
 
         <b-collapse id="nav-text-collapse" is-nav>
             <b-navbar-nav>
@@ -37,5 +37,7 @@
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
   @Component
-  export default class Navigation extends Vue {}
+  export default class Navigation extends Vue {
+    public iconUrl = process.env.VUE_APP_ICON;
+  }
 </script>
