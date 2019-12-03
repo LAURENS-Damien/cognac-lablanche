@@ -10,7 +10,6 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
-  import axios from 'axios';
   import * as Constants from '@/ts/constants';
 
   @Component
@@ -18,7 +17,7 @@
     private historic = {};
 
     public created() {
-      axios.get(Constants.URL_HISTORIC)
+      this.axios.get(Constants.URL_HISTORIC)
         .then((response) => {
           this.historic = response.data;
         })

@@ -80,7 +80,6 @@
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
   import * as Constants from '@/ts/constants';
-  import axios from 'axios';
 
   @Component
   export default class Newsletter extends Vue {
@@ -94,7 +93,7 @@
     private remarks = '';
 
     public postForm() {
-        axios.post(Constants.URL_NEWSLETTER_SUSCRIBE, {
+      this.axios.post(Constants.URL_NEWSLETTER_SUSCRIBE, {
           email: this.email,
           name: this.name,
           surname: this.surname,

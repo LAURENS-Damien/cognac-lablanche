@@ -9,14 +9,13 @@
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
   import * as Constants from '@/ts/constants';
-  import axios from 'axios';
 
   @Component
   export default class Gallery extends Vue {
     private gallery = {};
 
     public created() {
-      axios.get(Constants.URL_GALLERY)
+      this.axios.get(Constants.URL_GALLERY)
         .then((response) => {
           this.gallery = response.data;
         })

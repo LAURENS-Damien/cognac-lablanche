@@ -21,7 +21,6 @@
     import { Component, Vue } from 'vue-property-decorator';
     import Separator from '@/components/Separator.vue';
     import Production from '@/components/Production.vue';
-    import axios from 'axios';
     import * as Constants from '@/ts/constants';
     import Coordinates from '@/components/Coordinates.vue';
 
@@ -36,7 +35,7 @@
       private homePage = {};
 
       public created() {
-        axios.get(Constants.URL_HOME_PAGE)
+        this.axios.get(Constants.URL_HOME_PAGE)
           .then((response) => {
             this.homePage = response.data;
           })

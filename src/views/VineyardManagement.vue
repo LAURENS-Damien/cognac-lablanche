@@ -10,7 +10,6 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
-  import axios from 'axios';
   import * as Constants from '@/ts/constants';
 
   @Component
@@ -18,7 +17,7 @@
     private vineyardMnagement = {};
 
     public created() {
-      axios.get(Constants.URL_VINEYARD_MANAGEMENT)
+      this.axios.get(Constants.URL_VINEYARD_MANAGEMENT)
         .then((response) => {
           this.vineyardMnagement = response.data;
         })

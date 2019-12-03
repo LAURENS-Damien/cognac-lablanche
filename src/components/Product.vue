@@ -27,7 +27,6 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 import * as Constants from '@/ts/constants';
-import axios from 'axios';
 import router from '@/router';
 
 @Component
@@ -47,7 +46,7 @@ export default class Product extends Vue {
 
     @Watch('productPath')
     public getProduct() {
-    axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
+      this.axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
           .then((response) => {
             this.productId = response.data.id;
             this.productName = response.data.post_title;
@@ -60,7 +59,7 @@ export default class Product extends Vue {
     }
 
     public getCustomFields() {
-      axios.get(Constants.URL_ACF_PAGES + '/' + this.productId)
+      this.axios.get(Constants.URL_ACF_PAGES + '/' + this.productId)
         .then((response) => {
           this.acf = response.data.acf;
         })

@@ -6,7 +6,6 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import axios from 'axios';
     import * as Constants from '@/ts/constants';
 
     @Component
@@ -14,7 +13,7 @@
       private contact = {};
 
       public created() {
-        axios.get(Constants.URL_CONTACT)
+        this.axios.get(Constants.URL_CONTACT)
           .then((response) => {
             this.contact = response.data;
           })

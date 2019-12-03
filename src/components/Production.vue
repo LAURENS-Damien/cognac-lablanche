@@ -14,7 +14,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import axios from 'axios';
 import * as Constants from '@/ts/constants';
 import Products from '@/components/Products.vue';
 
@@ -28,7 +27,7 @@ export default class Production extends Vue {
     private productsCategoryToDisplay = '';
 
     public created() {
-        axios.get(Constants.URL_CATALOG)
+      this.axios.get(Constants.URL_CATALOG)
             .then((response) => {
                 this.production = response.data;
                 this.productsCategoryToDisplay = response.data[0].post_name;

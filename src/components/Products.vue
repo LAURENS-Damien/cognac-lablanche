@@ -11,7 +11,6 @@
 <script lang="ts">
 import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
 import * as Constants from '@/ts/constants';
-import axios from 'axios';
 import Product from './Product.vue';
 
 @Component({
@@ -29,7 +28,7 @@ export default class Products extends Vue {
 
   @Watch('productsCategory')
   public getProducts() {
-    axios.get(Constants.URL_CATALOG + '/' + this.productsCategory)
+    this.axios.get(Constants.URL_CATALOG + '/' + this.productsCategory)
       .then((response) => {
         this.products = [];
         for (const product in response.data) {

@@ -10,7 +10,6 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
-  import axios from 'axios';
   import * as Constants from '@/ts/constants';
 
   @Component
@@ -18,7 +17,7 @@
     private campingCarParking = {};
 
     public created() {
-      axios.get(Constants.URL_CAMPING_CAR_PARKING)
+      this.axios.get(Constants.URL_CAMPING_CAR_PARKING)
         .then((response) => {
           this.campingCarParking = response.data;
         })
