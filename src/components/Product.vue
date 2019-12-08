@@ -1,25 +1,33 @@
 <template>
-    <div class="product">
-        <div class="bottle product-size" v-html="product.image" v-on:click="goToProductSheet"></div>
-        <span v-html="product.title" class="font-weight-bold"></span>
-        <br>
-        <span v-html="acf.appellation"></span>
-        <br>
-        <div v-if="fullDescription" class="pt-2">
-            <span class="underline">Description :</span>
-            <p v-html="acf.description">Description</p>
-            <span class="underline">Cépage :</span>
-            <p v-html="acf.cepage">Cépage</p>
-            <span class="underline">Température :</span>
-            <p v-html="acf.temperature_ideale_de_service">Température</p>
-            <span class="underline">Nez :</span>
-            <p v-html="acf.nez">Nez</p>
-            <span class="underline">Bouche :</span>
-            <p v-html="acf.bouche">Bouche</p>
-            <span class="underline">Suggestions :</span>
-            <p v-html="acf.suggestions">Suggestions</p>
-            <span class="underline">Divers :</span>
-            <p v-html="acf.divers">Divers</p>
+    <div class="product container-fluid">
+        <div class="row">
+            <div class="col-12 px-0" v-bind:class="fullDescription ? 'col-lg-4' : ''">
+                <div class="bottle product-size" v-bind:class="fullDescription ? 'product-king-size' : 'product-size'" v-html="product.image" v-on:click="goToProductSheet"></div>
+                <span v-html="product.title" class="d-block col-12 px-0 font-weight-bold"/>
+                <span v-html="acf.appellation" class="d-block col-12 px-0"/>
+                <span v-html="acf.prix" class="d-block col-12 px-0"/>
+                <br>
+            </div>
+            <div class="col-12 col-lg-8 px-0 px-lg-4">
+                <div class="row">
+                    <div v-if="fullDescription" class="col-12 pt-2">
+                        <span class="underline">Description :</span>
+                        <p v-html="acf.description">Description</p>
+                        <span class="underline">Cépage :</span>
+                        <p v-html="acf.cepage">Cépage</p>
+                        <span class="underline">Température :</span>
+                        <p v-html="acf.temperature_ideale_de_service">Température</p>
+                        <span class="underline">Nez :</span>
+                        <p v-html="acf.nez">Nez</p>
+                        <span class="underline">Bouche :</span>
+                        <p v-html="acf.bouche">Bouche</p>
+                        <span class="underline">Suggestions :</span>
+                        <p v-html="acf.suggestions">Suggestions</p>
+                        <span class="underline">Divers :</span>
+                        <p v-html="acf.divers">Divers</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -83,5 +91,15 @@ export default class Product extends Vue {
 
     .product-size {
         height: 380px;
+    }
+
+    .product-king-size {
+        height: 500px;
+    }
+
+    @include media-breakpoint-up(md)  {
+        .product-king-size {
+            height: 750px;
+        }
     }
 </style>

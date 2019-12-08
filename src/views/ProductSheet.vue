@@ -1,8 +1,8 @@
 <template>
-    <div class="p-3">
+    <div class="container-fluid limit-max-width p-3">
         <Breadcrumb v-bind:items="items"/>
         <Product v-bind:fullDescription="true" v-bind:productPath="$route.params.productPath"/>
-        <span class="font-weight-bold underline lead">Notre gamme complète : </span>
+        <h2 class="my-2 my-lg-4 font-weight-bold underline lead">Notre gamme complète : </h2>
         <Products v-bind:productsCategory="$route.params.productsCategory"/>
     </div>
 </template>

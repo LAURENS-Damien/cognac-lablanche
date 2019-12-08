@@ -52,4 +52,11 @@ export default class Products extends Vue {
         list-style: none;
         padding-inline-start: 0;
     }
+
+    li {
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
 </style>

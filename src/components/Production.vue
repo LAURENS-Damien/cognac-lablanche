@@ -49,3 +49,11 @@ export default class Production extends Vue {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+    li {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+</style>
