@@ -2,7 +2,7 @@
     <div class="product container-fluid">
         <div class="row">
             <div class="col-12 px-0" v-bind:class="fullDescription ? 'col-lg-4' : ''">
-                <div class="bottle product-size" v-bind:class="fullDescription ? 'product-king-size' : 'product-size'" v-html="product.image" v-on:click="goToProductSheet"></div>
+                <div class="bottle" v-bind:class="fullDescription ? 'product-king-size' : 'product-size'" v-html="product.image" v-on:click="goToProductSheet"></div>
                 <span v-html="product.title" class="d-block col-12 px-0 font-weight-bold"/>
                 <span v-html="acf.appellation" class="d-block col-12 px-0"/>
                 <span v-html="acf.prix" class="d-block col-12 px-0"/>
@@ -25,6 +25,8 @@
                         <p v-html="acf.suggestions">Suggestions</p>
                         <span class="underline">Divers :</span>
                         <p v-html="acf.divers">Divers</p>
+                        <span class="underline">Prix :</span>
+                        <p v-html="acf.divers">10 euros</p>
                     </div>
                 </div>
             </div>
@@ -85,7 +87,7 @@ export default class Product extends Vue {
 
 <style lang="scss" scoped>
     .bottle {
-        border: 1px grey solid;
+        border: 1px $hf-color solid;
         text-align: center;
     }
 
@@ -99,7 +101,7 @@ export default class Product extends Vue {
 
     @include media-breakpoint-up(md)  {
         .product-king-size {
-            height: 750px;
+            height: 700px;
         }
     }
 </style>

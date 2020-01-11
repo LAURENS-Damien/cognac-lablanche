@@ -8,5 +8,6 @@ export const URL_CONTACT = process.env.VUE_APP_API_PATH + '/contact';
 export const URL_GALLERY = process.env.VUE_APP_API_PATH + '/galerie';
 export const URL_PRODUCT = process.env.VUE_APP_API_PATH + '/produit';
 export const URL_ORDER = process.env.VUE_APP_API_PATH + '/commander';
+export const URL_SHOP_PRESENTATION = process.env.VUE_APP_API_PATH + '/presentation-magasin';
 export const URL_ACF_PAGES = process.env.VUE_APP_ACF_API_PATH + '/pages';
 export const URL_NEWSLETTER_SUSCRIBE = process.env.VUE_APP_API_NEWSLETTER + '/subscribe';

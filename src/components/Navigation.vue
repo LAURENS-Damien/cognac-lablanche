@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable="lg" type="dark" variant="dark">
+    <b-navbar toggleable="lg" class="flex-lg-column hf-color">
         <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
 
         <b-navbar-brand><img alt="Vue logo" v-bind:src="iconUrl"></b-navbar-brand>
@@ -7,7 +7,7 @@
         <b-collapse id="nav-text-collapse" is-nav>
             <b-navbar-nav>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/">Accueil</router-link>
+                    <router-link class="nav-link" to="/" style="color: white;">Accueil</router-link>
                 </li>
                 <b-nav-item-dropdown text="L'exploitation" right>
                     <b-dropdown-item href="/historique">Historique</b-dropdown-item>
@@ -27,7 +27,7 @@
                     <router-link class="nav-link" to="/newsletter">Newsletter</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/commander">Commander</router-link>
+                    <router-link class="nav-link" to="/commander">Vente de nos produits</router-link>
                 </li>
             </b-navbar-nav>
         </b-collapse>

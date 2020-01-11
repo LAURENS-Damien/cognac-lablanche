@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <ul class="row">
-            <li v-for="product in products" class="col-12 col-lg-3 mb-5">
+            <li v-for="product in products" class="col-12 col-lg-3">
                 <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath" v-bind:productsCategory="productsCategory"/>
             </li>
         </ul>

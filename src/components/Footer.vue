@@ -1,6 +1,6 @@
 <template>
     <div class="footer p-3">
-        <span>Copyright Cognac Lablanche © 2019 Tous droits réservés.</span>
+        <span>Copyright Cognac Lablanche © 2020 Tous droits réservés.</span>
     </div>
 </template>
 

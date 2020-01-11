@@ -6,8 +6,22 @@
   width: 100%;
 }
 
+.wp-block-image,
+.wp-block-image img {
+  margin: 0;
+  height: 100%;
+}
+
 .limit-max-width {
   max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hf-color {
+  background-color: $hf-color;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white!important;
 }

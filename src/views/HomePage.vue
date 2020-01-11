@@ -7,11 +7,11 @@
                 <Separator/>
                 <div class="text-center" v-html="homePage.content"></div>
             </div>
-            <Coordinates class="col-12 pt-3 pt-lg-5 text-center "/>
+            <Production/>
         </div>
-        <div class="row pt-4">
+        <div class="row">
             <div class="col-12 px-0">
-                <Production/>
+                <Coordinates class="col-12 pt-3 pb-lg-5 text-center "/>
             </div>
         </div>
     </div>
