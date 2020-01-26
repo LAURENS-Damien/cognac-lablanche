@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid">
-        <ul class="row">
+        <ul class="row" v-on:click="scrollTop">
             <li v-for="product in products" class="col-12 col-lg-3">
                 <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath" v-bind:productsCategory="productsCategory"/>
             </li>
@@ -43,6 +43,13 @@ export default class Products extends Vue {
       .catch(() => {
         window.location.href = '/erreur';
       });
+  }
+
+  public scrollTop() {
+    const top = document.querySelector('.navbar');
+    if (top !== null) {
+      top.scrollIntoView(false);
+    }
   }
 }
 </script>

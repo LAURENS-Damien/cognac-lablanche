@@ -5,28 +5,28 @@
                 <div class="bottle" v-bind:class="fullDescription ? 'product-king-size' : 'product-size'" v-html="product.image" v-on:click="goToProductSheet"></div>
                 <span v-html="product.title" class="d-block col-12 px-0 font-weight-bold"/>
                 <span v-html="acf.appellation" class="d-block col-12 px-0"/>
-                <span v-html="acf.prix" class="d-block col-12 px-0"/>
+                <span v-if="!fullDescription" v-html="acf.prix" class="d-block col-12 px-0"/>
                 <br>
             </div>
             <div class="col-12 col-lg-8 px-0 px-lg-4">
                 <div class="row">
                     <div v-if="fullDescription" class="col-12 pt-2">
-                        <span class="underline">Description :</span>
+                        <span class="underline font-weight-bold">Description :</span>
                         <p v-html="acf.description">Description</p>
-                        <span class="underline">Cépage :</span>
+                        <span class="underline font-weight-bold">Cépage :</span>
                         <p v-html="acf.cepage">Cépage</p>
-                        <span class="underline">Température :</span>
+                        <span class="underline font-weight-bold">Température :</span>
                         <p v-html="acf.temperature_ideale_de_service">Température</p>
-                        <span class="underline">Nez :</span>
+                        <span class="underline font-weight-bold">Nez :</span>
                         <p v-html="acf.nez">Nez</p>
-                        <span class="underline">Bouche :</span>
+                        <span class="underline font-weight-bold">Bouche :</span>
                         <p v-html="acf.bouche">Bouche</p>
-                        <span class="underline">Suggestions :</span>
+                        <span class="underline font-weight-bold">Suggestions :</span>
                         <p v-html="acf.suggestions">Suggestions</p>
-                        <span class="underline">Divers :</span>
+                        <span class="underline font-weight-bold">Divers :</span>
                         <p v-html="acf.divers">Divers</p>
-                        <span class="underline">Prix :</span>
-                        <p v-html="acf.divers">10 euros</p>
+                        <span class="underline font-weight-bold">Prix :</span>
+                        <p v-html="acf.prix" class="text-price">Prix</p>
                     </div>
                 </div>
             </div>
