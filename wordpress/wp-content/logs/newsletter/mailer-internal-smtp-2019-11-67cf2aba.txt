@@ -1,0 +1,11 @@
+02-11-2019 09:49:55 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 11:03:58 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 11:06:42 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 11:07:47 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 11:57:54 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 13:51:39 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 13:52:27 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 13:58:09 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 13:58:42 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 14:00:02 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+02-11-2019 15:25:34 - ERROR - m: 9,5 MB, u: 0 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting

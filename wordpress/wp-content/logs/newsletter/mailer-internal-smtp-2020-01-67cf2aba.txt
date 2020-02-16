@@ -1,0 +1,1 @@
+22-01-2020 21:32:05 - ERROR - m: 12,0 MB, u: 1 - SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting

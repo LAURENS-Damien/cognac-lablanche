@@ -1,0 +1,22 @@
+31-10-2019 18:19:09 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 18:19:09 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `profile_1`, `status`, `token`, `updated`, `ip`) VALUES ('toti@gmail.com', 'DIABATE', 'DIABATE', 'address', '1 rue du paradis', 'C', 'a9cda02d63', '1572545949', '::1')
+31-10-2019 18:19:38 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 18:19:38 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `profile_1`, `status`, `token`, `updated`, `ip`) VALUES ('tot1@gmail.com', 'DIABATE', 'DIABATE', '1', '1 rue du paradis', 'C', '4595eaff92', '1572545978', '::1')
+31-10-2019 18:19:59 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 18:19:59 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `profile_1`, `status`, `token`, `updated`, `ip`) VALUES ('titi@test.com', 'tertg', 'sd', '1', '1 rue de toto', 'C', 'c67080f347', '1572545999', '::1')
+31-10-2019 18:24:03 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 18:24:03 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `profile_1`, `status`, `token`, `updated`, `ip`) VALUES ('titi@test.comt', 'erss', 'd', 'address', '1 rue de toto', 'C', '6a7756517d', '1572546243', '::1')
+31-10-2019 18:26:39 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 18:26:39 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `profile_1`, `status`, `token`, `updated`, `ip`) VALUES ('toto@gmail.comi', 'DIABATEsedw', 'DIABATEsw', 'address', '1 rue du paradis', 'C', '1a2e6d2b80', '1572546399', '::1')
+31-10-2019 20:01:28 - FATAL - m: 9,3 MB, u: 0 - Champ 'list_0' inconnu dans field list
+31-10-2019 20:01:28 - FATAL - m: 9,3 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `list_0`, `status`, `token`, `updated`, `ip`) VALUES ('test@example.com', 'Name', 'Surname', '1', 'C', '5e207a1799', '1572552088', '::1')
+31-10-2019 22:20:49 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_adress' inconnu dans field list
+31-10-2019 22:20:49 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_adress`, `status`, `token`, `updated`, `ip`) VALUES ('test@example.com', 'Name', 'Surname', 'Test', 'C', 'b5f4276981', '1572560449', '::1')
+31-10-2019 22:54:28 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 22:54:28 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `status`, `token`, `updated`, `ip`) VALUES ('test@test.com', 'Test', 'Test', 'Test', 'C', '62afe2ed69', '1572562468', '::1')
+31-10-2019 22:54:54 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 22:54:54 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `status`, `token`, `updated`, `ip`) VALUES ('test@test.com', 'Test', 'Test', 'Test', 'C', '6a9afc623d', '1572562494', '::1')
+31-10-2019 22:55:09 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 22:55:09 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `status`, `token`, `updated`, `ip`) VALUES ('test@test.com', 'Test', 'Test', 'Test', 'C', '64005e8957', '1572562509', '::1')
+31-10-2019 22:55:25 - FATAL - m: 9,4 MB, u: 0 - Champ 'profile_0' inconnu dans field list
+31-10-2019 22:55:25 - FATAL - m: 9,4 MB, u: 0 - INSERT INTO `wp_newsletter` (`email`, `name`, `surname`, `profile_0`, `status`, `token`, `updated`, `ip`) VALUES ('toto@gmail.com', 'DIABATE', 'DIABATE', 'Test', 'C', 'd15244980a', '1572562525', '::1')
