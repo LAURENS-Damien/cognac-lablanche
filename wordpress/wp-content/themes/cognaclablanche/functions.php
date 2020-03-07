@@ -45,9 +45,9 @@ function get_image($content) {
 	
 }
 
-function get_home_page( $data ) {
+function get_home_page() {
 	$page = get_page_by_path('accueil', OBJECT, 'page');
-	
+
 	$home_page["id"] = $page->ID;
 	$home_page["title"] = $page->post_title;
 	$home_page["content"] = get_paragraph($page->post_content);
@@ -67,7 +67,7 @@ add_action( 'rest_api_init', function () {
 	) );
   } );
   
-function get_historic( $data ) {
+function get_historic() {
 	$page = get_page_by_path('historique', OBJECT, 'page');
 
 	$historic["id"] = $page->ID;
@@ -89,7 +89,7 @@ add_action( 'rest_api_init', function () {
 	) );
   } );
   
-function get_vineyard_management( $data ) {
+function get_vineyard_management() {
 	$page = get_page_by_path('conduite-du-vignoble', OBJECT, 'page');
 
 	$vineyard_management["id"] = $page->ID;
@@ -111,7 +111,7 @@ add_action( 'rest_api_init', function () {
 	) );
   } );  
 
-function get_parking( $data ) {
+function get_parking() {
 	$page = get_page_by_path('parking-camping-car', OBJECT, 'page');
 
 	$parking["id"] = $page->ID;
@@ -133,7 +133,7 @@ add_action( 'rest_api_init', function () {
 	) );
   } );   
   
-function get_catalog( $data ) {
+function get_catalog() {
 	$parent_page_id = get_page_by_path('catalogue', OBJECT, 'page')->ID;
 	$catalog = get_pages( array(
 		'sort_column' => 'menu_order',
@@ -197,7 +197,7 @@ add_action( 'rest_api_init', function () {
  ) );
 } );
 
-function get_photo( $data ) {// Utile?
+function get_photo() {
 	$page =  get_page_by_path('catalogue', OBJECT, 'page');
 	
     if ( empty( $page ) ) {
@@ -296,5 +296,26 @@ add_action( 'rest_api_init', function () {
  register_rest_route( 'wp/v2', '/contact', array(
    'methods' => 'GET',
    'callback' => 'get_contact',
+ ) );
+} );
+
+function get_wp_datas() {
+	$wpDatas["homePage"] = get_home_page();
+	$wpDatas["historic"] = get_historic();
+	$wpDatas["vineyardManagement"] = get_vineyard_management();
+	$wpDatas["parking"] = get_parking();
+	$wpDatas["catalog"] = get_catalog();
+	$wpDatas["gallery"] = get_gallery();
+	$wpDatas["order"] = get_order();
+	$wpDatas["shopPresentation"] = get_shop_presentation();
+	$wpDatas["contact"] = get_contact();
+
+   return $wpDatas;
+}
+
+add_action( 'rest_api_init', function () {
+ register_rest_route( 'wp/v2', '/wp-datas', array(
+   'methods' => 'GET',
+   'callback' => 'get_wp_datas',
  ) );
 } );
