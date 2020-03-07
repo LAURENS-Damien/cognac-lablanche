@@ -11,3 +11,4 @@ export const URL_ORDER = process.env.VUE_APP_API_PATH + '/commander';
 export const URL_SHOP_PRESENTATION = process.env.VUE_APP_API_PATH + '/presentation-magasin';
 export const URL_ACF_PAGES = process.env.VUE_APP_ACF_API_PATH + '/pages';
 export const URL_NEWSLETTER_SUSCRIBE = process.env.VUE_APP_API_NEWSLETTER + '/subscribe';
+export const URL_WP_DATAS = process.env.VUE_APP_API_PATH + '/wp-datas';

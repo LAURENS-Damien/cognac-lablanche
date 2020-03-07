@@ -6,6 +6,7 @@ import PortalVue from 'portal-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import axios, {AxiosStatic} from 'axios';
+import store from './store';
 
 Vue.use(BootstrapVue);
 Vue.use(PortalVue);
@@ -27,5 +28,6 @@ declare module 'vue/types/vue' {
 
 new Vue({
   router,
+  store,
   render: (h) => h(App),
 }).$mount('#app');
