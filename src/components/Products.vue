@@ -1,10 +1,12 @@
 <template>
     <div class="container-fluid">
-        <ul class="row" v-on:click="scrollTop">
-            <li v-for="product in products" class="col-12 col-lg-3">
-                <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath" v-bind:productsCategory="productsCategory"/>
-            </li>
-        </ul>
+        <Loader v-bind:loading="viewState">
+            <ul class="row" v-on:click="scrollTop">
+                <li v-for="product in products" class="col-12 col-lg-3">
+                    <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath" v-bind:productsCategory="productsCategory"/>
+                </li>
+            </ul>
+        </Loader>
     </div>
 </template>
 
@@ -12,15 +14,19 @@
 import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
 import * as Constants from '@/ts/constants';
 import Product from './Product.vue';
+import Loader from '@/components/Loader.vue';
+import {ViewState} from '@/ts/Models';
 
 @Component({
   components: {
     Product,
+    Loader,
   },
 })
 export default class Products extends Vue {
   @Prop() private productsCategory!: string;
   private products: any[] = [];
+  private viewState: ViewState = ViewState.Loading;
 
   public created() {
     this.getProducts();
@@ -28,6 +34,7 @@ export default class Products extends Vue {
 
   @Watch('productsCategory')
   public getProducts() {
+    this.viewState = ViewState.Loading;
     this.axios.get(Constants.URL_CATALOG + '/' + this.productsCategory)
       .then((response) => {
         this.products = [];
@@ -39,6 +46,7 @@ export default class Products extends Vue {
             this.products.push(productJSON);
           }
         }
+        this.viewState = ViewState.Loaded;
       })
       .catch(() => {
         window.location.href = '/erreur';
