@@ -2,14 +2,21 @@
   text-decoration: underline;
 }
 
-.full-width img {
-  width: 100%;
+.wp-block-media-text__media img {
+  max-width: 100%;
+}
+
+.product .wp-block-image img {
+  width: auto;
+  max-width: 100%;
 }
 
 .wp-block-image,
 .wp-block-image img {
   margin: 0;
   height: 100%;
+  width: 100%;
+  max-width: none;
 }
 
 .limit-max-width {

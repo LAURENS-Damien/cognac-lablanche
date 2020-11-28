@@ -2,13 +2,19 @@
     <div class="home-page container-fluid limit-max-width">
         <Loader v-bind:loading="viewState">
             <div v-if="homePageDatas != null" class="row mt-lg-5">
-                <div class="col-12 col-lg-6 pt-3" v-html="homePageDatas.image"></div>
+                <div class="col-12 col-lg-6 pt-3" style="height: 315px;">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mnn90IqBom4" frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen></iframe>
+                </div>
                 <div class="col-12 col-lg-6">
                     <h1 class="text-center" v-html="homePageDatas.title"></h1>
                     <Separator/>
                     <div class="text-center" v-html="homePageDatas.content"></div>
                 </div>
-                <Production/>
+                <div class="col-12">
+                  <Production/>
+                </div>
             </div>
             <div class="row">
                 <div class="col-12 px-0">

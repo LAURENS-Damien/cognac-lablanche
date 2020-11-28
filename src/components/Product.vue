@@ -2,14 +2,14 @@
     <div class="product container-fluid">
         <Loader v-bind:loading="viewState">
             <div class="row">
-                <div class="col-12 px-0" v-bind:class="fullDescription ? 'col-lg-4' : ''">
+                <div class="col-12 px-0" v-bind:class="fullDescription ? 'col-lg-5' : ''">
                     <div class="bottle" v-bind:class="fullDescription ? 'product-king-size' : 'product-size'" v-html="product.image" v-on:click="goToProductSheet"></div>
                     <span v-html="product.title" class="d-block col-12 px-0 font-weight-bold"/>
                     <span v-html="acf.appellation" class="d-block col-12 px-0"/>
                     <span v-if="!fullDescription" v-html="acf.prix" class="d-block col-12 px-0"/>
                     <br>
                 </div>
-                <div class="col-12 col-lg-8 px-0 px-lg-4">
+                <div class="col-12 col-lg-7 px-0 px-lg-4">
                     <div class="row">
                         <div v-if="fullDescription" class="col-12 pt-2">
                             <span class="underline font-weight-bold">Description :</span>
@@ -103,6 +103,7 @@ export default class Product extends Vue {
 
     .product-size {
         height: 380px;
+        max-width: 100%;
     }
 
     .product-king-size {

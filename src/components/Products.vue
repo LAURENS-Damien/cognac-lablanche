@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <Loader v-bind:loading="viewState">
             <ul class="row" v-on:click="scrollTop">
-                <li v-for="product in products" class="col-12 col-lg-3">
+                <li v-for="product in products" class="col-12 col-xl-4">
                     <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath" v-bind:productsCategory="productsCategory"/>
                 </li>
             </ul>
