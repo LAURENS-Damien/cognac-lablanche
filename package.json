@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
-    "bootstrap-vue": "^2.20.0",
+    "bootstrap-vue": "^2.20.1",
     "portal-vue": "^2.1.7",
     "vue": "^2.6.12",
     "vue-class-component": "^7.2.6",
@@ -25,7 +25,7 @@
     "@vue/cli-plugin-babel": "^4.2.3",
     "@vue/cli-plugin-typescript": "^4.2.3",
     "@vue/cli-service": "^4.2.3",
-    "fibers": "^4.0.2",
+    "fibers": "^5.0.0",
     "lint-staged": "^10.0.8",
     "node-sass": "^5.0.0",
     "npm-run-all": "^4.1.5",
