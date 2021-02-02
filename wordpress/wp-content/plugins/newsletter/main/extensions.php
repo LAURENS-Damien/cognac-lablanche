@@ -1,8 +1,10 @@
 <?php
-@include_once NEWSLETTER_INCLUDES_DIR . '/controls.php';
+/* @var $this Newsletter */
+defined('ABSPATH') || exit;
+
+include_once NEWSLETTER_INCLUDES_DIR . '/controls.php';
 $controls = new NewsletterControls();
-$module = Newsletter::instance();
-$extensions = $module->getTnpExtensions();
+$extensions = $this->getTnpExtensions();
 
 $controls->data = get_option('newsletter_main');
 
@@ -72,6 +74,7 @@ if ($controls->is_action('activate')) {
         <?php if (is_array($extensions)) { ?>
 
             <!-- Extensions -->
+            <h3 class="tnp-section-title">Additional professional features</h3>
             <?php foreach ($extensions AS $e) { ?>
 
                 <?php if ($e->type == "extension" || $e->type == "premium") { ?>
@@ -88,6 +91,7 @@ if ($controls->is_action('activate')) {
             <?php } ?>
 
             <!-- Integrations -->
+            <h3 class="tnp-section-title">Integrations with 3rd party plugins</h3>
             <?php foreach ($extensions AS $e) { ?>
 
                 <?php if ($e->type == "integration") { ?>
@@ -106,6 +110,7 @@ if ($controls->is_action('activate')) {
             <?php } ?>
 
             <!-- Delivery -->
+            <h3 class="tnp-section-title">Integrations with reliable mail delivery services</h3>
             <?php foreach ($extensions AS $e) { ?>
 
                 <?php if ($e->type == "delivery") { ?>

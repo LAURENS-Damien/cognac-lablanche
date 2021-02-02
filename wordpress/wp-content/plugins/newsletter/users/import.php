@@ -25,7 +25,7 @@ if ($controls->is_action('import')) {
     }
 
     // Set the selected preferences inside the
-    if (!is_array($controls->data['preferences']))
+    if (!isset($controls->data['preferences']) || !is_array($controls->data['preferences']))
         $controls->data['preferences'] = array();
 
 //    if ($options['followup'] == 'activate') {
@@ -150,6 +150,10 @@ if ($controls->is_action('import')) {
 
         <h2><?php _e('Import', 'newsletter') ?></h2>
         <p>
+            <strong>Please,consider to use the free <a href="?page=newsletter_main_extensions">Advanced import addon</a> 
+            to manage more fields and different file formats.</strong>
+        </p>
+        <p>
             The import and export functions <strong>ARE NOT for backup</strong>. If you want to backup you should consider to backup the
             wp_newsletter* tables. Please, read on bottom of this page the data format to use and other important notes.</p>
 
@@ -234,7 +238,7 @@ if ($controls->is_action('import')) {
                         </div>
                     </th>
                     <td>
-                        <textarea name="options[csv]" wrap="off" style="width: 100%; height: 200px; font-size: 11px; font-family: monospace"><?php echo $controls->data['csv']; ?></textarea>
+                        <textarea name="options[csv]" wrap="off" style="width: 100%; height: 200px; font-size: 11px; font-family: monospace"><?php echo $controls->get_value('csv'); ?></textarea>
                     </td>
                 </tr>
                 <tr>

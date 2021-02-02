@@ -5,9 +5,18 @@ Requires PHP: 5.6
 
 == Changelog ==
 
+= 1.1.3 =
+
+* Small typo fixes
+
+= 1.1.2 =
+
+* New lighter license checking
+
 = 1.1.1 =
 
 * New license and update management
+* Removed obsolete code
 
 = 1.1.0 =
 
