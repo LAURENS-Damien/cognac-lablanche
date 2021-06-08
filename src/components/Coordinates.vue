@@ -1,25 +1,32 @@
 <template>
-    <div class="container-fluid">
-        <div class="row" v-html="contact.content"></div>
-    </div>
+  <Loader v-bind:loading="viewState">
+        <div class="row" v-if="contactDatas !== null" v-html="contactDatas.content"></div>
+  </Loader>
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
-    import * as Constants from '@/ts/constants';
+import {Component, Vue} from 'vue-property-decorator';
+import Loader from '@/components/Loader.vue';
+import {ViewState} from '@/ts/Models';
+import {ContactDatas} from '@/ts/WpDatas';
 
-    @Component
+@Component({
+      components: {Loader},
+    })
     export default class Coordinates extends Vue {
-      private contact = {};
+      private viewState: ViewState = ViewState.Loading;
+
+      get contactDatas(): ContactDatas | null {
+        if (this.$store.getters.wpDatas.contactDatas !== undefined) {
+          this.viewState = ViewState.Loaded;
+          return this.$store.getters.wpDatas.contactDatas;
+        } else {
+          return null;
+        }
+      }
 
       public created() {
-        this.axios.get(Constants.URL_CONTACT)
-          .then((response) => {
-            this.contact = response.data;
-          })
-          .catch(() => {
-            window.location.href = '/erreur';
-          });
+        this.$store.dispatch('loadWpDatas');
       }
     }
 </script>

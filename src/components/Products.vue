@@ -1,13 +1,12 @@
 <template>
-    <div class="container-fluid">
-        <Loader v-bind:loading="viewState">
-            <ul class="row" v-on:click="scrollTop">
-                <li v-for="product in products" class="col-12 col-xl-4">
-                    <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath" v-bind:productsCategory="productsCategory"/>
-                </li>
-            </ul>
-        </Loader>
-    </div>
+  <Loader :loading="viewState">
+    <ul class="row" @click="scrollTop">
+      <li v-for="product in products" class="col-12 col-xl-4">
+        <Product v-bind:fullDescription="false" v-bind:productPath="product.productPath"
+                 v-bind:productsCategory="productsCategory"/>
+      </li>
+    </ul>
+  </Loader>
 </template>
 
 <script lang="ts">
@@ -24,7 +23,7 @@ import {ViewState} from '@/ts/Models';
   },
 })
 export default class Products extends Vue {
-  @Prop() private productsCategory!: string;
+  @Prop() private readonly productsCategory!: string;
   private products: any[] = [];
   private viewState: ViewState = ViewState.Loading;
 
@@ -36,21 +35,21 @@ export default class Products extends Vue {
   public getProducts() {
     this.viewState = ViewState.Loading;
     this.axios.get(Constants.URL_CATALOG + '/' + this.productsCategory)
-      .then((response) => {
-        this.products = [];
-        for (const product in response.data) {
-          if (product !== '') {
-            const productJSON = {
-              productPath : this.productsCategory + '/' + response.data[product].post_name,
-            };
-            this.products.push(productJSON);
+        .then((response) => {
+          this.products = [];
+          for (const product in response.data) {
+            if (product !== '') {
+              const productJSON = {
+                productPath: this.productsCategory + '/' + response.data[product].post_name,
+              };
+              this.products.push(productJSON);
+            }
           }
-        }
-        this.viewState = ViewState.Loaded;
-      })
-      .catch(() => {
-        window.location.href = '/erreur';
-      });
+          this.viewState = ViewState.Loaded;
+        })
+        .catch(() => {
+          window.location.href = '/erreur';
+        });
   }
 
   public scrollTop() {
@@ -63,15 +62,15 @@ export default class Products extends Vue {
 </script>
 
 <style lang="scss" scoped>
-    ul {
-        list-style: none;
-        padding-inline-start: 0;
-    }
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
 
-    li {
-        &:hover {
-            cursor: pointer;
-        }
+li {
+  &:hover {
+    cursor: pointer;
+  }
 
-    }
+}
 </style>

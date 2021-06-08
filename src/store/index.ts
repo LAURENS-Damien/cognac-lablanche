@@ -1,15 +1,23 @@
 import Vue from 'vue';
 import * as Vuex from 'vuex';
 import axios from 'axios';
-import {AppState, HomePageDatas, ProductionDatas, WpDatas} from '@/ts/Models';
+import {AppState} from '@/ts/Models';
 import * as Constants from '@/ts/constants';
-import Production from '@/components/Production.vue';
+import {StoreOptions} from 'vuex';
+import {
+  CampingCarParkingDatas, ContactDatas, GalleryDatas,
+  HistoricDatas,
+  HomePageDatas, OrderDatas,
+  ProductionDatas, ShopPresentationDatas,
+  VineyardManagementDatas,
+  WpDatas,
+} from '@/ts/WpDatas';
 
 Vue.use(Vuex);
 
 type Context = Vuex.ActionContext<AppState, AppState>;
 
-export default new Vuex.Store({
+const store: StoreOptions<AppState> = {
   state: {
     wpDatas: new WpDatas(),
   },
@@ -18,18 +26,30 @@ export default new Vuex.Store({
       return state.wpDatas;
     },
   },
-  mutations: {
-    setWpDatas(state, wpDatas: WpDatas) {
-      state.wpDatas = wpDatas;
-    },
-  },
   actions: {
     loadWpDatas(context: Context) {
       axios.get(Constants.URL_WP_DATAS)
         .then((response) => {
           const homePageDatas = response.data.homePage as HomePageDatas;
           const productionDatas = response.data.catalog as ProductionDatas;
-          const wpDatas = new WpDatas(homePageDatas, productionDatas);
+          const vineyardManagementDatas = response.data.vineyardManagement as VineyardManagementDatas;
+          const historicDatas = response.data.historic as HistoricDatas;
+          const campingCarParkingDatas = response.data.parking as CampingCarParkingDatas;
+          const galleryDatas = response.data.gallery as GalleryDatas;
+          const contactDatas = response.data.contact as ContactDatas;
+          const orderDatas = response.data.order as OrderDatas;
+          const shopPresentationDatas = response.data.shopPresentation as ShopPresentationDatas;
+          const wpDatas = new WpDatas(
+            homePageDatas,
+            productionDatas,
+            vineyardManagementDatas,
+            historicDatas,
+            campingCarParkingDatas,
+            galleryDatas,
+            contactDatas,
+            orderDatas,
+            shopPresentationDatas,
+          );
           context.commit('setWpDatas', wpDatas);
         })
         .catch(() => {
@@ -39,4 +59,11 @@ export default new Vuex.Store({
         });
     },
   },
-});
+  mutations: {
+    setWpDatas(state, wpDatas: WpDatas) {
+      state.wpDatas = wpDatas;
+    },
+  },
+};
+
+export default new Vuex.Store<AppState>(store);

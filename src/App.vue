@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Navigation/>
-    <router-view/>
+    <div class="container-fluid limit-max-width">
+      <router-view/>
+    </div>
     <Footer/>
   </div>
 </template>

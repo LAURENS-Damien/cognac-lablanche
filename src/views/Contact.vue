@@ -1,33 +1,45 @@
 <template>
-    <div class="contact container-fluid limit-max-width my-3 my-lg-5">
-        <h1 class="my-lg-5">{{ contact.title }}</h1>
-        <Coordinates/>
+  <Loader v-bind:loading="viewState">
+    <div id="contact" class="my-3 my-lg-5" v-if="contactDatas !== null">
+      <h1 class="my-lg-5">{{ contactDatas.title }}</h1>
+      <Coordinates/>
     </div>
+  </Loader>
 </template>
 
 <script lang="ts">
-  import { Component, Vue } from 'vue-property-decorator';
-  import * as Constants from '@/ts/constants';
-  import Coordinates from '@/components/Coordinates.vue';
+import {Component, Mixins, Vue} from 'vue-property-decorator';
+import Coordinates from '@/components/Coordinates.vue';
+import Loader from '@/components/Loader.vue';
+import {ViewState} from '@/ts/Models';
+import {ContactDatas} from '@/ts/WpDatas';
+import MetaTitleMixins from '@/ts/mixins/MetaTitleMixins';
+import MetaDescriptionMixins from '@/ts/mixins/MetaDescriptionMixins';
 
-  @Component({
-    components: {
-      Coordinates,
-    },
-  })
-  export default class Contact extends Vue {
-    private contact = {};
+@Component({
+  components: {
+    Loader,
+    Coordinates,
+  },
+})
+export default class Contact extends Mixins(MetaTitleMixins, MetaDescriptionMixins) {
+  public metaTitle = 'Contacts - Cognac LABLANCHE';
+  public metaDescription = 'Découvrez nos coordonnées téléphoniques, notre adresse ainsi que nos horaires d\'ouvreture';
+  private viewState: ViewState = ViewState.Loading;
 
-    public created() {
-      this.axios.get(Constants.URL_CONTACT)
-        .then((response) => {
-          this.contact = response.data;
-        })
-        .catch(() => {
-          window.location.href = '/erreur';
-        });
+  get contactDatas(): ContactDatas | null {
+    if (this.$store.getters.wpDatas.contactDatas !== undefined) {
+      this.viewState = ViewState.Loaded;
+      return this.$store.getters.wpDatas.contactDatas;
+    } else {
+      return null;
     }
   }
+
+  public created() {
+    this.$store.dispatch('loadWpDatas');
+  }
+}
 </script>
 
 <style lang="scss" scoped>

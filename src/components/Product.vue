@@ -65,6 +65,7 @@ export default class Product extends Vue {
 
     @Watch('productPath')
     public getProduct() {
+      this.viewState = ViewState.Loading;
       this.axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
           .then((response) => {
             this.productId = response.data.id;

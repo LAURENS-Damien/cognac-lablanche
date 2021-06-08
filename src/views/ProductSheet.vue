@@ -21,6 +21,8 @@
     },
   })
   export default class ProductSheet extends Vue {
+    public metaTitle = 'Une culture raisonnée et des engagements - Cognac LABLANCHE';
+    public metaDescription = 'A la recherche de Cognacs, Pineaux des Charentes, Pétillants de raisin ou autres vins de Pays Charentais? Nous vous donnons rendez vous sur la commune de Chadenac en Charente-Maritime';
     private items = {};
 
     public created() {

@@ -1,11 +1,11 @@
 <template>
     <div class="header">
-        <div v-if="isLoading">
+        <template v-if="isLoading">
             <Spinner/>
-        </div>
-        <div v-else>
+        </template>
+        <template v-else>
             <slot></slot>
-        </div>
+        </template>
     </div>
 </template>
 

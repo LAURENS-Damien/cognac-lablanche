@@ -6,17 +6,18 @@
   max-width: 100%;
 }
 
+.product .wp-block-image,
 .product .wp-block-image img {
   width: auto;
+  height: 100%;
   max-width: 100%;
 }
 
-.wp-block-image,
 .wp-block-image img {
-  margin: 0;
+  //margin: 0;
   height: 100%;
   width: 100%;
-  max-width: none;
+  //max-width: none;
 }
 
 .limit-max-width {

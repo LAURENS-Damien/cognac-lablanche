@@ -1,59 +1,83 @@
 <template>
-    <div class="container-fluid pt-lg-5">
-        <h2 class="text-lg-center">Notre production</h2>
-        <ul id="productsList" class="text-lg-center">
-            <li v-for="(products, index) in production" v-on:click="changeProductsCategory" v-bind:productsCategoryToDisplay="products.post_name" :class="index === 0 ? 'underline' : ''" class="d-lg-inline-block px-lg-3">
-                {{ products.post_title }}
-            </li>
-        </ul>
-        <div class="px-1">
-            <Products v-if="this.productsCategoryToDisplay !== ''" v-bind:productsCategory="this.productsCategoryToDisplay"/>
-        </div>
+  <Loader :loading="viewState">
+    <div class="pt-3 pt-lg-5">
+      <h2 class="text-lg-center">Notre production</h2>
+      <ul class="text-lg-center">
+        <li v-for="category in productionDatas"
+            :class="['category d-lg-inline-block px-lg-3', isUnderlined(category) ? 'underline' : null]"
+            v-html="category.categoryTitle"
+            @click="changeCategory(category)">
+        </li>
+      </ul>
+      <Products class="px-1" :productsCategory="currentCategoryName"/>
     </div>
+  </Loader>
 </template>
 
+
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import * as Constants from '@/ts/constants';
+import {Component, Vue, Watch} from 'vue-property-decorator';
 import Products from '@/components/Products.vue';
+import {ViewState} from '@/ts/Models';
+import {Category, ProductionDatas} from '@/ts/WpDatas';
+import Loader from '@/components/Loader.vue';
 
 @Component({
-    components: {
-        Products,
-    },
+  components: {
+    Loader,
+    Products,
+  },
 })
 export default class Production extends Vue {
-    private production = [];
-    private productsCategoryToDisplay = '';
+  private viewState: ViewState = ViewState.Loading;
+  private currentCategory: Category | null = null;
 
-    public created() {
-      this.axios.get(Constants.URL_CATALOG)
-            .then((response) => {
-                this.production = response.data;
-                this.productsCategoryToDisplay = response.data[0].post_name;
-            })
-            .catch(() => {
-              window.location.href = '/erreur';
-            });
-    }
+  public created() {
+    this.$store.dispatch('loadWpDatas');
+  }
 
-    public changeProductsCategory(event: any): void {
-      this.productsCategoryToDisplay = event.target.getAttribute('productsCategoryToDisplay');
-      const productsList = document.getElementById('productsList');
-      if (productsList !== null) {
-        for (const child of productsList.children) {
-          child.classList.remove('underline');
-        }
-      }
-      event.target.classList.add('underline');
+  @Watch('productionDatas')
+  public onProductionDatasChange() {
+    if (this.productionDatas !== null && this.currentCategory === null) {
+      this.currentCategory = this.productionDatas[0];
+      this.viewState = ViewState.Loaded;
     }
+  }
+
+  get productionDatas(): ProductionDatas | null {
+    return this.$store.getters.wpDatas.productionDatas;
+  }
+
+  get currentCategoryName(): string | null {
+    if (this.currentCategory !== null) {
+      return this.currentCategory.categoryName;
+    } else {
+      return null;
+    }
+  }
+
+  public isUnderlined(category: Category): boolean {
+    if (category.categoryName === this.currentCategory?.categoryName) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public changeCategory(newCategory: Category) {
+    if (this.currentCategory !== null) {
+      this.currentCategory.selected = false;
+    }
+    this.currentCategory = newCategory;
+    this.currentCategory.selected = true;
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-    li {
-        &:hover {
-            cursor: pointer;
-        }
-    }
+.category {
+  &:hover {
+    cursor: pointer;
+  }
+}
 </style>
