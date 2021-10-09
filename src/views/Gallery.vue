@@ -14,13 +14,19 @@
         </div>
         <div class="col-12 col-lg-6 py-3" style="height: 315px;">
           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-GCaizOmjlE" frameborder="0"
-                  title="YouTube de dégustation de brulots"
+                  title="Vidéo de dégustation de brulots"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <div class="col-12 col-lg-6 py-3" style="height: 315px;">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MNhGwR2S4rI" frameborder="0"
+                  title="Vidéo de présentation de la conduite du vignoble"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen></iframe>
         </div>
         <div class="col-12 col-lg-6 py-3" style="height: 315px;">
           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tVdm6HB07H4" frameborder="0"
-                  title="YouTube de l'aire de camping car"
+                  title="Vidéo de présentation de l'aire de camping car"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen></iframe>
         </div>
