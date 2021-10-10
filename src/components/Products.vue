@@ -35,7 +35,7 @@ export default class Products extends Vue {
   public getProducts() {
     this.viewState = ViewState.Loading;
     this.axios.get(Constants.URL_CATALOG + '/' + this.productsCategory)
-        .then((response) => {
+        .then((response: any) => {
           this.products = [];
           for (const product in response.data) {
             if (product !== '') {

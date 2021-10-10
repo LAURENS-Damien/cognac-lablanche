@@ -42,6 +42,7 @@ import * as Constants from '@/ts/constants';
 import router from '@/router';
 import {ViewState} from '@/ts/Models';
 import Loader from '@/components/Loader.vue';
+import {ProductAcfsModel, ProductCustomFieldsModel, ProductModel} from '@/models/components/ProductModel';
 
 @Component({
   components: {
@@ -54,8 +55,7 @@ export default class Product extends Vue {
     @Prop() private productsCategory!: string;
     @Prop() private fullDescription!: boolean;
     private productId: number = 0;
-    private productName: string = '';
-    private acf: string = '';
+    private acf = {};
     private product = {};
     private viewState: ViewState = ViewState.Loading;
 
@@ -63,25 +63,28 @@ export default class Product extends Vue {
       this.getProduct();
     }
 
+    // TODO : il faudrait récupérer les infos depuis le store
     @Watch('productPath')
     public getProduct() {
       this.viewState = ViewState.Loading;
       this.axios.get(Constants.URL_PRODUCT + '/' + this.productPath)
           .then((response) => {
-            this.productId = response.data.id;
-            this.productName = response.data.post_title;
+            const product = response.data as ProductModel;
+            this.productId = product.id;
             this.getCustomFields();
-            this.product = response.data;
+            this.product = product;
           })
           .catch(() => {
             window.location.href = '/erreur';
           });
     }
 
+    // TODO : il faudrait récupérer les infos depuis le store
     public getCustomFields() {
       this.axios.get(Constants.URL_ACF_PAGES + '/' + this.productId)
         .then((response) => {
-          this.acf = response.data.acf;
+          const productCustomFields = response.data as ProductAcfsModel;
+          this.acf = productCustomFields.acf as ProductCustomFieldsModel;
           this.viewState = ViewState.Loaded;
         })
         .catch(() => {

@@ -29,7 +29,7 @@ const store: StoreOptions<AppState> = {
   actions: {
     loadWpDatas(context: Context) {
       axios.get(Constants.URL_WP_DATAS)
-        .then((response) => {
+        .then((response: any) => {
           const homePageDatas = response.data.homePage as HomePageDatas;
           const productionDatas = response.data.catalog as ProductionDatas;
           const vineyardManagementDatas = response.data.vineyardManagement as VineyardManagementDatas;
