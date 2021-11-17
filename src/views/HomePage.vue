@@ -5,7 +5,8 @@
         <div class="row mt-lg-5">
           <div class="video-container col-12 col-lg-6 pt-3">
             <iframe class="video-presentation"
-                    width="100%" height="100%" src="https://www.youtube.com/embed/mnn90IqBom4"
+                    width="100%" height="100%" data-src="https://www.youtube.com/embed/mnn90IqBom4"
+                    title="Vidéo de présentation de l'entreprise"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
           </div>
@@ -57,12 +58,21 @@ export default class HomePage extends Mixins(MetaTitleMixins, MetaDescriptionMix
   get homePageDatas(): HomePageDatas {
     if (this.$store.getters.wpDatas.homePageDatas !== undefined) {
       this.viewState = ViewState.Loaded;
+      this.loadPresentationVideo();
     }
     return this.$store.getters.wpDatas.homePageDatas;
   }
 
   public created() {
     this.$store.dispatch('loadWpDatas');
+  }
+
+  public loadPresentationVideo(): void {
+    const presentationVideo = document.querySelector('.video-presentation');
+    const presentationVideoDataSrc = presentationVideo?.getAttribute('data-src');
+    if (presentationVideoDataSrc != null) {
+      presentationVideo?.setAttribute('src', presentationVideoDataSrc);
+    }
   }
 }
 </script>
