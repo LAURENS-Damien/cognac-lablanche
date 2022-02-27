@@ -17,7 +17,7 @@
             <div class="col-12">
               <h2>Nos autres adresses</h2>
               <p class="pt-3">Retrouvez nous également à Jonzac aux <a href="https://delices-de-saintonge.com/">Déclices
-                de Saintonge</a> et à Pons à la boutique <a href="https://www.facebook.com/Le-panier-du-producteur-Pons-105479374884971/">Le
+                de Saintonge</a> et à Pons à la boutique <a href="https://lepanierduproducteur-pons.com/">Le
                 panier du producteur</a></p>
             </div>
           </div>
@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import {Component, Mixins, Vue} from 'vue-property-decorator';
+import {Component, Mixins} from 'vue-property-decorator';
 import Separator from '@/components/Separator.vue';
 import Loader from '@/components/Loader.vue';
 import {ViewState} from '@/ts/Models';
